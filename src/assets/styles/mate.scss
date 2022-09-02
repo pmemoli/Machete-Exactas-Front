@@ -1,0 +1,40 @@
+$font: 'Dosis', sans-serif;
+
+#mate {
+    font-family: $font;
+    display: flex;
+    justify-content: space-between;
+
+    .planes {
+        display: flex;
+        gap: 1.5%;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 0.6rem;
+    }
+
+    p {
+        font-size: 1.35rem;
+        text-indent: 1em;
+    }
+
+    img {
+        width: 49%;
+        margin-top: 0.7rem;
+        border-radius: 5px;
+    }
+}
+
+@media (max-device-width: 660px) {
+    #mate {
+        h1 {
+            font-size: 8vh;
+        }
+
+        p {
+            font-size: 5.2vh;
+        }
+    }
+}

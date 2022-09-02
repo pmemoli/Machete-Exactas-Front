@@ -1,0 +1,96 @@
+$font: 'Dosis', sans-serif;
+
+@mixin clean-link() {
+    text-decoration: none;
+    color: inherit;
+}
+
+#nav {
+    text-align: center;
+    background-color: rgb(28, 28, 28);
+    color: white;
+    font-family: $font;
+    min-width: 100vw;
+
+    .title {
+        font-size: 2.5rem;
+        @include clean-link();
+    }
+
+    .pages-list {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        gap: 4.5rem;
+        padding: 0.8rem;
+        font-size: 1.6rem;
+
+        .page {
+            @include clean-link();
+            font-size: 1.7rem;
+            &:hover {
+                color: rgb(188, 188, 188);
+            }
+        }
+    }
+}
+
+#sidebar {
+    width: 18rem;
+    min-width: 18rem;
+    margin-left: 1rem;
+    font-family: $font;
+    font-size: 1.53rem;
+    font-weight: 350;
+    background-color: rgb(215, 213, 77);
+    min-height: 120vh;
+    
+    .side-items {
+        list-style: none;
+        padding-left: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 1rem;
+        text-align: center;
+
+        .side-item {
+            margin-top: 0.5rem;
+            cursor: pointer;
+        }
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+#instrucciones {
+    img {
+        display: block;
+        margin: auto;
+        margin-top: 4vh;
+        height: 120vh
+    }
+}
+
+@media (max-device-width: 660px) {
+    #nav {
+        .title {
+            font-size: 11vh;
+        }
+
+        .pages-list {
+            .page {
+                font-size: 6vh;
+                gap: 0vw;
+                margin-left: 3vw;
+                margin-right: 3vw;
+            }
+        }
+    }
+
+    #sidebar {
+        font-size: 5.4vh;
+        min-height: 250vh;
+    }
+}

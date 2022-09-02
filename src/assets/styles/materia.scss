@@ -1,0 +1,172 @@
+$font: 'Dosis', sans-serif;
+
+.section {
+    .tipo-resuelto {
+        display: flex;
+        gap: 1.3rem;
+
+        .upload-button {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.item-resuelto {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+}
+
+#resueltos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+
+    h2 {
+        font-size: 1.9rem;
+    }
+}
+
+.report-button {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 10%;
+    font-family: $font;
+    border: none;
+    background-color: rgb(239, 239, 239);
+}
+
+#modal {
+    background-color: rgb(97, 97, 97);
+    color: white;
+    border-radius: 5px;
+    display: none;
+    position: fixed;
+    font-size: 1.1rem;
+    min-width: 30vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+
+    .upload-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 0.6rem;
+
+        form {
+            display: flex;
+        }
+
+        label {
+            display: flex;
+
+            input {
+                flex: 2;
+                border-radius: 3px;
+                font-family: $font;
+                font-size: 1rem;
+                border: none;
+            }
+        }
+    }
+
+    select {
+        border: none;
+        border-radius: 3px;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .upload-area {
+        margin-top: 0.6rem;
+        display: flex;
+        gap: 0.3rem;
+
+        button {
+            font-size: 1rem;
+            border-radius: 5px;
+            width: 100%;
+        }
+    }
+
+    .instructions {
+        text-decoration: none;
+        color: rgb(203, 203, 203);
+    }
+}
+
+.display {
+    display: block !important;
+}
+
+@media (max-device-width: 1000px) {
+    #modal {
+        top: 30%;
+    }
+}
+
+@media (max-device-width: 660px) {
+    #modal {
+        font-size: 5vh;
+        padding: 3vh;
+        top: 40%;
+        min-width: 75%;
+
+        .upload-content {
+            label {    
+                input {
+                    font-size: 4vh;
+                }
+            }
+        }
+
+        select {
+            font-size: 5vh;
+        }
+
+        .upload-area {
+            display: flex;
+            flex-direction: column;
+
+            button {
+                width: 100%;
+                font-size: 5vh;
+                height: 16vh;
+            }
+
+            .button-top {
+                margin-top: 90px;
+            }
+
+            #captcha {
+                transform: scale(2, 2);
+                transform-origin: 0 0;
+            }
+        }
+    }
+    #resueltos {
+        h2 {
+            font-size: 6.2vh;
+        }
+    }
+
+    .item-resuelto {
+        font-size: 4.3vh;
+    }
+
+    .section {
+        .tipo-resuelto {    
+            .upload-button {
+                font-size: 3vh;
+            }
+        }
+    }
+}
+

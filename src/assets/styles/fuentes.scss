@@ -1,0 +1,35 @@
+$font: 'Dosis', sans-serif;
+
+#fuentes {
+    font-family: $font;
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 0.6rem;
+    }
+
+    li {
+        font-size: 1.5rem;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+@media (max-device-width: 660px) {
+    #fuentes {
+        h1 {
+            font-size: 8vh;
+        }
+
+        li {
+            font-size: 5.2vh;
+        }
+    }
+}

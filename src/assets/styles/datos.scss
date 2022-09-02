@@ -1,0 +1,39 @@
+$font: 'Dosis', sans-serif;
+
+#datos {
+    font-family: $font;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 0.6rem;
+    }
+
+    p {
+        font-size: 1.35rem;
+        text-indent: 1em;
+    }
+
+    img {
+        width: 80%;
+        margin-top: 0.7rem;
+        border-radius: 5px;
+    }
+}
+
+@media (max-device-width: 660px) {
+    #datos {
+        h1 {
+            font-size: 8vh;
+        }
+
+        p {
+            font-size: 5.2vh;
+        }
+
+        img {
+            width: 90%;
+        }
+    }
+}
