@@ -3,7 +3,7 @@ import axios from 'axios'
 import ReCAPTCHA from 'react-google-recaptcha'
 
 const axiosResueltos = axios.create({
-  baseURL: '/api/resueltos'
+  baseURL: 'https://machete-exactas-back.vercel.app/api/resueltos'
 })
 
 function validateLink(link) {
