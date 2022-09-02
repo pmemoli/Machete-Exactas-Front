@@ -5,7 +5,7 @@ import Modal from './Modal.js'
 import '../assets/styles/materia.scss'
 
 const axiosResueltos = axios.create({
-  baseURL: 'https://machete-exactas-back.vercel.app/api/resueltos'
+  baseURL: '/api/resueltos'
 })
 
 export default function Materia({nombre, carrera}) {
