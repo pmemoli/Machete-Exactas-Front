@@ -12,7 +12,7 @@ function Welcome() {
       <h1>Matematica</h1>
       <p>
       Material para la carrera de Ciencias Matematicas.
-      Aca esta la <a href='https://cms.dm.uba.ar/academico/materias/' target='_blank'>pagina de la materia</a> y 
+      Aca esta la <a href='https://cms.dm.uba.ar/academico/materias/' target='_blank'>pagina de la carrera</a> y 
       un <a href='https://visualizador-encuestas.exactas.uba.ar/index.html' target='_blank'>visualizador de encuestas</a>.
       </p>
       <div className='planes'>

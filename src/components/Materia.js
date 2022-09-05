@@ -4,31 +4,34 @@ import Resueltos from './Resueltos.js'
 import Modal from './Modal.js'
 import '../assets/styles/materia.scss'
 
+const backSource = ''
+
 const axiosResueltos = axios.create({
-  baseURL: '/api/resueltos'
+  baseURL: `${backSource}/api/resueltos`
 })
 
 export default function Materia({nombre, carrera}) {
   const [modalDisplay, setModalDisplay] = useState('no-display')
   const [resueltos, setResueltos] = useState([])
-  const typeRef = useRef()
+  const [tipoRes, setTipoRes] = useState('')
 
   if (nombre == 'Matematica 1' || nombre == 'Analisis 2 (C)') nombre = 'Analisis 1'
   if (nombre == 'Matematica 3') nombre = 'Analisis 2'
   if (nombre == 'Probabilidad') nombre = 'Probabilidad Y Estadistica (M)'
   if (nombre == 'Intr. a la Est. y Cs. de Datos') nombre = 'Estadistica'
   if (nombre == 'Intr. a la Inv. Oper. y Opt.') nombre = 'Inv. Operativa'
-  
  
   const nombreMateria = nombre.replaceAll(' ', '_').toLowerCase()
 
-  useEffect(() => {loadResueltos()}, [nombre])
+  useEffect(() => {
+    loadResueltos()
+    setModalDisplay('no-display')  
+  }, [nombre])  
 
   async function loadResueltos() {
     try {
         const newResueltos = await axiosResueltos.get(`/por_materia/${nombreMateria}`)
         setResueltos(newResueltos.data.filter(resuelto => resuelto.accepted === 1))
-        console.log(resueltos)
     }
     catch(err) {
         console.log(err)
@@ -38,7 +41,7 @@ export default function Materia({nombre, carrera}) {
   function handleModalDisplay(type) {
     if (modalDisplay === 'no-display') setModalDisplay('display')
     else setModalDisplay('no-display')
-    typeRef.current.value = type
+    setTipoRes(type)
   }
 
   return (
@@ -54,7 +57,8 @@ export default function Materia({nombre, carrera}) {
         <Resueltos nombre='Complementos' tipoResuelto='complementos' handleModal={handleModalDisplay} resueltos={resueltos}/>
       </div>
 
-      <Modal modalDisplay={modalDisplay} typeRef={typeRef} nombreMateria={nombreMateria} setModalDisplay={setModalDisplay}/>
+      <Modal modalDisplay={modalDisplay} typeRef={tipoRes} nombreMateria={nombreMateria} setModalDisplay={setModalDisplay}/>
+
       <br/><br/><br/>
     </div>
   )

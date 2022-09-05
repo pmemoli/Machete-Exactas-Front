@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Coleccion de resueltos, apuntes y complementos para FCEN UBA"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -23,6 +23,13 @@
         position: absolute;
         min-height: max-content;
         height: 100%;
+        overflow-x: hidden;
+      }
+
+      @media (max-device-width: 700px) {
+        html,body {
+          overflow-x: visible;
+        }
       }
 
       #root {

@@ -11,7 +11,7 @@ function Welcome() {
       <h1>Datos</h1>
       <p>
       Material para la carrera de Ciencia de Datos.
-      Aca esta la <a href='https://lcd.exactas.uba.ar/' target='_blank'>pagina de la materia</a> y 
+      Aca esta la <a href='https://lcd.exactas.uba.ar/' target='_blank'>pagina de la carrera</a> y 
       un <a href='https://visualizador-encuestas.exactas.uba.ar/index.html' target='_blank'>visualizador de encuestas</a>.
       </p>
     <img src={plan}/>

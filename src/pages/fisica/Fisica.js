@@ -11,7 +11,7 @@ function Welcome() {
       <h1>Fisica</h1>
       <p>
       Material para la carrera de Ciencias Fisicas.
-      Aca esta la <a href='https://www.df.uba.ar/es/docentes/paginas-de-materias' target='_blank'>pagina de la materia</a> y 
+      Aca esta la <a href='https://www.df.uba.ar/es/docentes/paginas-de-materias' target='_blank'>pagina de la carrera</a> y 
       un <a href='https://visualizador-encuestas.exactas.uba.ar/index.html' target='_blank'>visualizador de encuestas</a>.
       </p>
     <img src={plan}/>

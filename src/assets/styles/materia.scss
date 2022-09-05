@@ -11,6 +11,39 @@ $font: 'Dosis', sans-serif;
     }
 }
 
+::-webkit-file-upload-button {
+    font-family: $font;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.file-input {
+    font-family: $font;
+    font-size: 1.1rem;
+}
+
+#modal-file {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    
+    .admin-buttons {
+        display: flex;
+        gap: 0.6rem;
+    }
+
+    button {
+        font-family: $font;
+        font-size: 1.1rem;
+        border-radius: 3px;
+    }
+}
+
 .item-resuelto {
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -113,6 +146,30 @@ button {
 }
 
 @media (max-device-width: 660px) {
+    ::-webkit-file-upload-button {
+        font-family: $font;
+        font-size: 5vh;
+        font-weight: 400;
+    }
+
+    .modal-buttons {
+        .admin-buttons {
+            gap: 3vh;
+        }
+    
+        button {
+            font-size: 4.8vh;
+        }
+    }
+
+    #modal-file {
+        gap: 1.5vh;
+    }
+
+    .file-input {
+        font-size: 5vh;
+    }
+
     #modal {
         font-size: 5vh;
         padding: 3vh;
@@ -170,3 +227,9 @@ button {
     }
 }
 
+
+@media (max-device-height: 600px) {
+    #modal {
+        top: 50%;
+    }
+}
