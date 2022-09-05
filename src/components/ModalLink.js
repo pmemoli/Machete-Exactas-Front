@@ -7,8 +7,9 @@ const backSource = ''
 const axiosResueltos = axios.create({
   baseURL: `${backSource}/api/resueltos`
 })
+
 function validateLink(link) {
-  const sources = ['imgur', 'drive.google.com/file', 'github']
+  const sources = ['imgur', 'drive.google.com/file', 'github', 'drive.google.com/drive/folders']
   const validSource = sources.some(source => (link.includes(source) && link.includes('https://')))
   const properLength = link.length < 340
 
