@@ -4,6 +4,7 @@ import '../../assets/styles/datos.scss'
 import plan from '../../assets/images/plan-datos.png'
 import Sidebar from '../../components/Sidebar.js'
 import Materia from '../../components/Materia.js'
+import { useParams } from 'react-router-dom'
 
 function Welcome() {
   return (
@@ -19,8 +20,9 @@ function Welcome() {
   )
 }
 
-export default function Compu({original, setOriginal}) {
-  const [materia, setMateria] = useState('home');
+export default function Datos({original, setOriginal}) {
+  const {materia} = useParams()
+  
   const materias = [
      'Analisis 1', 'Algebra 1', 'Algoritmos 1', 'Analisis 2', 'Algoritmos 2', 'Analisis Avanzado',
      'Alg. Lineal Computacional', 'Laboratorio de Datos', 'Probabilidad', 'Algoritmos 3', 'Intr. al Modelado Continuo',
@@ -28,14 +30,14 @@ export default function Compu({original, setOriginal}) {
   ]
 
   function renderContent() {
-    if (materia === 'home' || original) return <Welcome/>
+    if (materia === undefined) return <Welcome/>
     else return <Materia nombre={materia} carrera={'Datos'}/>
   }
 
   return (
     <div id='datos'>
       {renderContent()}
-      <Sidebar materias={materias} setMateria={setMateria} setOriginal={setOriginal}/>
+      <Sidebar materias={materias} carrera='datos'/>
     </div>
   )
 }

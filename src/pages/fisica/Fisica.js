@@ -4,6 +4,7 @@ import '../../assets/styles/fisica.scss'
 import plan from '../../assets/images/plan-fisica.png'
 import Sidebar from '../../components/Sidebar.js'
 import Materia from '../../components/Materia.js'
+import {useParams} from 'react-router-dom'
 
 function Welcome() {
   return (
@@ -20,7 +21,8 @@ function Welcome() {
 }
 
 export default function Fisica({original, setOriginal}) {
-  const [materia, setMateria] = useState('home');
+  const {materia} = useParams()
+
   const materias = [
     'Fisica 1', 'Matematica 1', 'Laboratorio 1', 'Fisica 2', 'Matematica 2', 'Matematica 3', 'Laboratorio 2', 'Calculo Numerico',
     'Fisica 3', 'Matematica 4', 'Laboratorio 3', 'Fisica 4', 'Mecanica Clasica', 'Fisica Teorica 1', 'Laboratorio 4',
@@ -29,14 +31,14 @@ export default function Fisica({original, setOriginal}) {
   ]
 
   function renderContent() {
-    if (materia === 'home' || original) return <Welcome/>
+    if (materia === undefined) return <Welcome/>
     else return <Materia nombre={materia} carrera={'Fisica'}/>
   }
 
   return (
     <div id='fisica'>
       {renderContent()}
-      <Sidebar materias={materias} setMateria={setMateria} setOriginal={setOriginal}/>
+      <Sidebar materias={materias} carrera='fisica'/>
     </div>
   )
 }

@@ -4,6 +4,7 @@ import '../../assets/styles/compu.scss'
 import plan from '../../assets/images/plan-compu.png'
 import Sidebar from '../../components/Sidebar.js'
 import Materia from '../../components/Materia.js'
+import {useParams} from 'react-router-dom'
 
 function Welcome() {
   return (
@@ -20,7 +21,8 @@ function Welcome() {
 }
 
 export default function Compu({original, setOriginal}) {
-  const [materia, setMateria] = useState('home');
+  const {materia} = useParams()
+  
   const materias = [
      'Analisis 2 (C)', 'Algebra 1', 'Probabilidad y Estadistica (C)', 'Algoritmos 1', 'Metodos Numericos',
      'Organizacion del Comp. 1', 'Algoritmos 2', 'Organizacion del Comp. 2', 'Algoritmos 3', 'Logica y Computabilidad',
@@ -29,14 +31,14 @@ export default function Compu({original, setOriginal}) {
   ]
 
   function renderContent() {
-    if (materia === 'home' || original) return <Welcome/>
+    if (materia === undefined) return <Welcome/>
     else return <Materia nombre={materia} carrera={'Compu'}/>
   }
 
   return (
     <div id='compu' style={{height: "max-content"}}>
       {renderContent()}
-      <Sidebar materias={materias} setMateria={setMateria} setOriginal={setOriginal}/>
+      <Sidebar materias={materias} carrera='compu'/>
     </div>
   )
 }

@@ -5,6 +5,7 @@ import Sidebar from '../../components/Sidebar.js'
 import Materia from '../../components/Materia.js'
 import planA from '../../assets/images/plan-aplicada.png'
 import planP from '../../assets/images/plan-pura.png'
+import {useParams} from 'react-router-dom'
 
 function Welcome() {
   return (
@@ -24,7 +25,8 @@ function Welcome() {
 }
 
 export default function Mate({original, setOriginal}) {
-  const [materia, setMateria] = useState('home');
+  const {materia} = useParams()
+
   const materias = [
     'Analisis 1', 'Algebra 1', 'Taller de Calculo Avanzado', 'Algebra Lineal', 'Analisis 2', 'Calculo Avanzado',
     'Calculo numerico', 'Probabilidad y Estadistica (M)', 'Analisis Complejo', 'Analisis Real', 'Algebra 2',
@@ -34,14 +36,14 @@ export default function Mate({original, setOriginal}) {
   ]
 
   function renderContent() {
-    if (materia === 'home' || original) return <Welcome/>
+    if (materia === undefined) return <Welcome/>
     else return <Materia nombre={materia} carrera={'Mate'}/>
   }
 
   return (
     <div id='mate'>
       {renderContent()}
-      <Sidebar materias={materias} setMateria={setMateria} setOriginal={setOriginal}/>
+      <Sidebar materias={materias} carrera='mate'/>
     </div>
   )
 }

@@ -14,6 +14,7 @@ export default function Materia({nombre, carrera}) {
   const [modalDisplay, setModalDisplay] = useState('no-display')
   const [resueltos, setResueltos] = useState([])
   const [tipoRes, setTipoRes] = useState('')
+  const [cargado, setCargado] = useState(false)
 
   if (nombre == 'Matematica 1' || nombre == 'Analisis 2 (C)') nombre = 'Analisis 1'
   if (nombre == 'Matematica 3') nombre = 'Analisis 2'
@@ -25,14 +26,16 @@ export default function Materia({nombre, carrera}) {
 
   useEffect(() => {
     loadResueltos()
-    setModalDisplay('no-display')  
+    setModalDisplay('no-display')
   }, [nombre])  
 
   async function loadResueltos() {
     try {
         const newResueltos = await axiosResueltos.get(`/por_materia/${nombreMateria}`)
         setResueltos(newResueltos.data.filter(resuelto => resuelto.accepted === 1))
+        setCargado(true)
     }
+
     catch(err) {
         console.log(err)
     }
@@ -44,7 +47,13 @@ export default function Materia({nombre, carrera}) {
     setTipoRes(type)
   }
 
-  return (
+  if (!cargado) return (
+    <div>
+      Cargando...
+    </div>
+  )
+
+  else return (
   <div>
       <h1>{nombre}</h1>
 
