@@ -19,14 +19,19 @@ const axiosResueltos = axios.create({
 
 function App() {
   const [original, setOriginal] = useState(true)
+  const [resueltos, setResueltos] = useState([])
+  const [cargado, setCargado] = useState(false)
+
   useEffect(() => {
     initialCall()
   }, [])
 
-  // Sends an initial call to the api to reduce vercels cold start
+  // Carga todos los resueltos de una
   async function initialCall() {  
     try {
-      const res = axiosResueltos.get('/por_materia/analisis_1')
+      const res = await axiosResueltos.get('/')
+      setResueltos(res.data)
+      setCargado(true)
     }
 
     catch(e) {console.log(e)}
@@ -41,17 +46,17 @@ function App() {
           <Route path="/otras-fuentes" element={<Fuentes/>}/>
           <Route path="/instrucciones" element={<Instrucciones/>}/>
 
-          <Route path="/mate" element={<Mate original={original} setOriginal={setOriginal}/>}/>
-          <Route path="/mate/:materia" element={<Mate original={original} setOriginal={setOriginal}/>}/>
+          <Route path="/mate" element={<Mate resueltos={resueltos} cargado={cargado}/>}/>
+          <Route path="/mate/:materia" element={<Mate resueltos={resueltos} cargado={cargado}/>}/>
 
-          <Route path="/compu" element={<Compu original={original} setOriginal={setOriginal}/>}/>
-          <Route path="/compu/:materia" element={<Compu original={original} setOriginal={setOriginal}/>}/>
+          <Route path="/compu" element={<Compu resueltos={resueltos} cargado={cargado}/>}/>
+          <Route path="/compu/:materia" element={<Compu resueltos={resueltos} cargado={cargado}/>}/>
 
-          <Route path="/datos" element={<Datos original={original} setOriginal={setOriginal}/>}/>
-          <Route path="/datos/:materia" element={<Datos original={original} setOriginal={setOriginal}/>}/>
+          <Route path="/datos" element={<Datos resueltos={resueltos} cargado={cargado}/>}/>
+          <Route path="/datos/:materia" element={<Datos resueltos={resueltos} cargado={cargado}/>}/>
 
-          <Route path="/fisica" element={<Fisica original={original} setOriginal={setOriginal}/>}/>
-          <Route path="/fisica/:materia" element={<Fisica original={original} setOriginal={setOriginal} key='1'/>}/>
+          <Route path="/fisica" element={<Fisica resueltos={resueltos} cargado={cargado}/>}/>
+          <Route path="/fisica/:materia" element={<Fisica resueltos={resueltos} cargado={cargado}/>}/>
         </Routes>
       </div>
     </div>

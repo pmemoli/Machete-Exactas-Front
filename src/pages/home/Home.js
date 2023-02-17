@@ -11,7 +11,7 @@ export default function Home() {
         <p>Esta es una pagina con resueltos, apuntes y complementos para las materias
         que se dan en el pabellon 1 de la facultad de ciencias exactas y naturales en la 
         UBA. Cualquiera puede contribuir con material yendo a la pagina de la materia. 
-        Puede tardar un tiempo en subirse por razones de moderacion.
+        Pueden tardar un tiempo en aparecer despues de subirse por razones de moderacion, y no pueden estar ya subidos.
         Los resueltos iniciales provienen de Cubawiki, Les Noetheries y Estufis (ver otras fuentes).</p>
         <img src={homeImg}/>
       </div>

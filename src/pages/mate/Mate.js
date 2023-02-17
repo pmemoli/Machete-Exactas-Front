@@ -24,7 +24,7 @@ function Welcome() {
   )
 }
 
-export default function Mate({original, setOriginal}) {
+export default function Mate({resueltos, cargado}) {
   const {materia} = useParams()
 
   const materias = [
@@ -37,7 +37,7 @@ export default function Mate({original, setOriginal}) {
 
   function renderContent() {
     if (materia === undefined) return <Welcome/>
-    else return <Materia nombre={materia} carrera={'Mate'}/>
+    else return <Materia nombre={materia} resueltos={resueltos} cargado={cargado}/>
   }
 
   return (

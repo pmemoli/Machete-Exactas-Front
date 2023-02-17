@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import axios from 'axios'
 import ReCAPTCHA from 'react-google-recaptcha'
 
@@ -17,6 +17,7 @@ function validateLink(link) {
 }
 
 export default function ModalLink({modalDisplay, typeRef, nombreMateria, setModalDisplay}) {
+    const [subiendo, setSubiendo] = useState()
     const captchaResponse = useRef()
     const titleRef = useRef()
     const linkRef = useRef()
@@ -24,6 +25,8 @@ export default function ModalLink({modalDisplay, typeRef, nombreMateria, setModa
 
     async function uploadLink() {
       try {
+        setSubiendo(true)
+
         const token = captchaResponse.current.getValue()
         const [title, link] = [titleRef.current.value, linkRef.current.value]
 
@@ -37,7 +40,6 @@ export default function ModalLink({modalDisplay, typeRef, nombreMateria, setModa
             return
         }
 
-        console.log('here')
         const resuelto = {
             materia: nombreMateria,
             tipoResuelto: tipoResueltoRef.current.value,
@@ -62,14 +64,26 @@ export default function ModalLink({modalDisplay, typeRef, nombreMateria, setModa
         else if (res.data.message === 'Failed Captcha') {
           alert('Fallo en validarse el captcha. Si tocaste "subir resuelto" muchas veces puede haberlo rechazado por spam. Proba cerrar la pestaña y reintentar.')
         }
-          
+        
+        setSubiendo(false)
       }
   
       catch(err) {
         console.log(err)
+        setSubiendo(false)
       }
     }
-    
+
+    function renderSubiendo() {
+      if (subiendo) return (
+        <div>
+          Subiendo...
+        </div>
+      )
+
+      else return (<></>)
+    }
+
     return (
       <div className={modalDisplay}>
         <div>
@@ -109,6 +123,8 @@ export default function ModalLink({modalDisplay, typeRef, nombreMateria, setModa
             <button className='button-top' onClick={uploadLink}>Subir resuelto</button>
             <button onClick={() => {setModalDisplay('no-display')}}>Cerrar</button>
           </div>
+
+          {renderSubiendo()}
         </div>
       </div>
     )

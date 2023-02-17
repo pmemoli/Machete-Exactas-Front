@@ -20,7 +20,7 @@ function Welcome() {
   )
 }
 
-export default function Compu({original, setOriginal}) {
+export default function Compu({resueltos, cargado}) {
   const {materia} = useParams()
   
   const materias = [
@@ -32,7 +32,7 @@ export default function Compu({original, setOriginal}) {
 
   function renderContent() {
     if (materia === undefined) return <Welcome/>
-    else return <Materia nombre={materia} carrera={'Compu'}/>
+    else return <Materia nombre={materia} resueltos={resueltos} cargado={cargado}/>
   }
 
   return (

@@ -10,18 +10,22 @@ const axiosResueltos = axios.create({
 
 export default function ModalFile({modalDisplay, typeRef, nombreMateria, setModalDisplay}) {
     const [file, setFile] = useState('None')
+    const [subiendo, setSubiendo] = useState()
     const captchaResponse = useRef()
     const fileRef = useRef()
     const tipoResueltoRef = useRef()
     
     async function uploadFile() {
+      try {
         if (file === 'None') {
           alert('No se subio ningun archivo')
+          setSubiendo(false)
           return
         }
 
         if (file.size > 10 * 1024 * 1024) {
           alert('Archivo mayor a 10mb')
+          setSubiendo(false)
           return
         }
         
@@ -34,10 +38,11 @@ export default function ModalFile({modalDisplay, typeRef, nombreMateria, setModa
         bodyFormData.append('mimeType', file.type)
         bodyFormData.append('stream', file)
 
+        setSubiendo(true)
+
         const res = await axiosResueltos.post(`/${token}/uploadFile`, bodyFormData, {headers: {"Content-Type": "multipart/form-data"}})
-        console.log(res)
+        
         if (res.data.message === 'Posted') {
-            console.log(`Uploaded ${file.title}`)
             alert('Se subio correctamente!')
             setModalDisplay('no-display')
             captchaResponse.current.reset()
@@ -50,6 +55,25 @@ export default function ModalFile({modalDisplay, typeRef, nombreMateria, setModa
         else if (res.data.message === 'Failed Captcha') {
           alert('Fallo en validarse el captcha. Si tocaste "subir resuelto" muchas veces puede haberlo rechazado por spam. Proba cerrar la pestaña y reintentar.')
         }
+
+        setSubiendo(false)
+      }
+
+      catch(e) {
+        console.log(e)
+        setSubiendo(false)
+      }
+      
+    }
+
+    function renderSubiendo() {
+      if (subiendo) return (
+        <div>
+          Subiendo...
+        </div>
+      )
+
+      else return (<></>)
     }
     
     return (
@@ -72,8 +96,11 @@ export default function ModalFile({modalDisplay, typeRef, nombreMateria, setModa
           </label>
 
           Se pueden subir archivos pdf, jpg o png de hasta 10mb. <br/>
-          Pasar en el nombre cuatrimestre y año del examen.
+
+          Pasar en el nombre cuatrimestre y año del examen. <br/>
   
+          Si desaparece "Subiendo..." sin explicacion volver a intentar. <br/>
+
           <div className='upload-area'>
             <div id='captcha'>
               <ReCAPTCHA sitekey='6LcCCnAhAAAAANi37e672XJb1jTMB_O_y5-6Xax-' ref={captchaResponse}/>
@@ -82,6 +109,8 @@ export default function ModalFile({modalDisplay, typeRef, nombreMateria, setModa
             <button className='button-top' onClick={uploadFile}>Subir resuelto</button>
             <button onClick={() => {setModalDisplay('no-display')}}>Cerrar</button>
           </div>
+
+          {renderSubiendo()}    
         </div>
       </div>
     )

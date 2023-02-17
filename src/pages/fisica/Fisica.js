@@ -20,7 +20,7 @@ function Welcome() {
   )
 }
 
-export default function Fisica({original, setOriginal}) {
+export default function Fisica({resueltos, cargado}) {
   const {materia} = useParams()
 
   const materias = [
@@ -32,7 +32,7 @@ export default function Fisica({original, setOriginal}) {
 
   function renderContent() {
     if (materia === undefined) return <Welcome/>
-    else return <Materia nombre={materia} carrera={'Fisica'}/>
+    else return <Materia nombre={materia} resueltos={resueltos} cargado={cargado}/>
   }
 
   return (
