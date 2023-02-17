@@ -95,10 +95,8 @@ export default function ModalFile({modalDisplay, typeRef, nombreMateria, setModa
             </select>
           </label>
 
-          Se pueden subir archivos pdf, jpg o png de hasta 10mb. <br/>
+          Archivos pdf, jpg o png de hasta 10mb. En el nombre cuatrimestre y año.<br/>
 
-          Pasar en el nombre cuatrimestre y año del examen. <br/>
-  
           Si desaparece "Subiendo..." sin explicacion volver a intentar. <br/>
 
           <div className='upload-area'>
