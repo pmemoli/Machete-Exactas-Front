@@ -24,7 +24,7 @@ export default function ModalFile({modalDisplay, typeRef, nombreMateria, setModa
         }
 
         if (file.size > 4.5 * 1024 * 1024) {
-          alert('Archivo mayor a 4.5mb')
+          alert('Archivo mayor a 4.5mb. Se puede comprimir o subir a un drive y compartir el link!')
           setSubiendo(false)
           return
         }
