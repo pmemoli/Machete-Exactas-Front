@@ -1,5 +1,4 @@
 import React, {useState, useRef, useEffect} from 'react'
-import axios from 'axios'
 import Resueltos from './Resueltos.js'
 import Modal from './Modal.js'
 import '../assets/styles/materia.scss'
@@ -16,6 +15,7 @@ export default function Materia({nombre, resueltos, cargado}) {
   if (nombre == 'Intr. a la Inv. Oper. y Opt.') nombre = 'Inv. Operativa'
  
   const nombreMateria = nombre.replaceAll(' ', '_').toLowerCase()
+  const yearRegex = /20\d\d/
 
   useEffect(() => {
     setResueltosMateria(resueltos.filter(resuelto => resuelto.materia === nombreMateria && resuelto.accepted === 1))

@@ -23,8 +23,8 @@ export default function ModalFile({modalDisplay, typeRef, nombreMateria, setModa
           return
         }
 
-        if (file.size > 10 * 1024 * 1024) {
-          alert('Archivo mayor a 10mb')
+        if (file.size > 4.5 * 1024 * 1024) {
+          alert('Archivo mayor a 4.5mb')
           setSubiendo(false)
           return
         }
@@ -95,7 +95,7 @@ export default function ModalFile({modalDisplay, typeRef, nombreMateria, setModa
             </select>
           </label>
 
-          Archivos pdf, jpg o png de hasta 10mb. En el nombre cuatrimestre y año.<br/>
+          Archivos pdf, jpg o png de hasta 4.5mb. En el nombre cuatrimestre y año.<br/>
 
           Si desaparece "Subiendo..." sin explicacion volver a intentar. <br/>
 
