@@ -5,6 +5,10 @@ $font: 'Dosis', sans-serif;
     color: inherit;
 }
 
+#footer {
+    font-family: $font;
+}
+
 #nav {
     text-align: center;
     background-color: rgb(28, 28, 28);

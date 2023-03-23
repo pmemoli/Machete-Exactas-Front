@@ -10,6 +10,7 @@ import Datos from './pages/datos/Datos.js'
 import Instrucciones from './pages/instrucciones/Instrucciones.js'
 import Fuentes from './pages/fuentes/Fuentes.js'
 import axios from 'axios'
+import Footer from './components/Footer'
 
 const backSource = ''
 
@@ -59,6 +60,8 @@ function App() {
           <Route path="/fisica/:materia" element={<Fisica resueltos={resueltos} cargado={cargado}/>}/>
         </Routes>
       </div>
+
+      <Footer/>
     </div>
   )
 }
