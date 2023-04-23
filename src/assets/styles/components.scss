@@ -7,6 +7,20 @@ $font: 'Dosis', sans-serif;
 
 #footer {
     font-family: $font;
+
+    img {
+        width: 20px;
+        margin: 3px;
+    }
+}
+
+@media (max-device-width: 660px) {
+    #footer {
+        img {
+            width: 2.2rem;
+            margin: 6px;
+        }
+    }
 }
 
 #nav {
