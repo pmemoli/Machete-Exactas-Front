@@ -43,7 +43,7 @@ export default function ModalFile({modalDisplay, typeRef, nombreMateria, setModa
         const res = await axiosResueltos.post(`/${token}/uploadFile`, bodyFormData, {headers: {"Content-Type": "multipart/form-data"}})
         
         if (res.data.message === 'Posted') {
-            alert('Se subio correctamente!')
+            alert('Se subio y mando a moderar correctamente!')
             setModalDisplay('no-display')
             captchaResponse.current.reset()
         }

@@ -7,6 +7,7 @@ export default function Sidebar() {
     <div id="sidebar">
       <ul className='side-items'>
         <li className='side-item'><a href='https://exactas.uba.ar/calendario-academico/' target='_blank' rel='noreferrer'>Calendario academico</a></li>
+        <li className='side-item'><a href='https://calendar.google.com/calendar/u/0/embed?src=sn0ir2b77hr77k7f1it9q2u730@group.calendar.google.com&ctz=America/Argentina/Buenos_Aires&pli=1' target='_blank' rel='noreferrer'>Menu universitario</a></li>
         <li className='side-item'><a href='https://exactas.uba.ar/agenda/' target='_blank' rel='noreferrer'>Agenda fcen</a></li>
         <li className='side-item'><Link to='/otras-fuentes'>Otras fuentes</Link></li>
       </ul>

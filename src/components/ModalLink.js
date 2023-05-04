@@ -53,7 +53,7 @@ export default function ModalLink({modalDisplay, typeRef, nombreMateria, setModa
         if (res.data.message === 'Posted') {
             console.log(`Uploaded ${title}`)
             setModalDisplay('no-display')
-            alert('Se subio correctamente!')
+            alert('Se subio y mando a moderar correctamente!')
             captchaResponse.current.reset()
         }
 
