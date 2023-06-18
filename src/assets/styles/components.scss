@@ -87,7 +87,7 @@ $font: 'Dosis', sans-serif;
         .side-item {
             margin-top: 0.8rem;
             @media only screen and (min-width: 768px) {
-                margin-top: 0.5rem;    
+                margin-top: 0.6rem;    
             }
             cursor: pointer;
         }
@@ -126,6 +126,8 @@ $font: 'Dosis', sans-serif;
 
     #sidebar {
         font-size: 5.4vh;
+        padding-left: 5px;
+        padding-right: 5px;
         min-height: 250vh;
     }
 }

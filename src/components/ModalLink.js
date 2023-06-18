@@ -9,7 +9,7 @@ const axiosResueltos = axios.create({
 })
 
 function validateLink(link) {
-  const sources = ['imgur', 'drive.google.com/file', 'github', 'drive.google.com/drive/folders']
+  const sources = ['imgur', 'drive.google.com', 'github', 'dm.uba', 'df.uba']
   const validSource = sources.some(source => (link.includes(source) && link.includes('https://')))
   const properLength = link.length < 340
 
@@ -36,7 +36,7 @@ export default function ModalLink({modalDisplay, typeRef, nombreMateria, setModa
         }
 
         if (!(title !== '' && link !== '' && validateLink(link) && title.length < 140)) {
-            alert('Link invalido. Tiene que empezar con https:// y ser de drive, github o imgur')
+            alert('Link invalido. Tiene que empezar con https:// y ser de drive, github, imgur o paginas del dm o df')
             return
         }
 
