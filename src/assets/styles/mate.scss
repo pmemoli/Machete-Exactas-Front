@@ -6,8 +6,18 @@ $font: 'Dosis', sans-serif;
     justify-content: space-between;
 
     .planes {
-        display: flex;
-        gap: 1.5%;
+        @media only screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            img {
+                width: 100%;
+            }
+        }
+        
+        @media only screen and (min-width: 768px) {
+            display: flex;
+            gap: 1.5%;
+        }
     }
 
     h1 {

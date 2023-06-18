@@ -12,6 +12,20 @@ $font: 'Dosis', sans-serif;
         width: 20px;
         margin: 3px;
     }
+
+    #useful-links {
+        display: flex;
+        justify-content: space-between;
+
+        #left-items {
+            display: flex;
+            align-items: center;
+
+            #contacto {
+                margin-left: 0.5rem;
+            }    
+        }
+    }
 }
 
 @media (max-device-width: 660px) {
@@ -71,7 +85,10 @@ $font: 'Dosis', sans-serif;
         text-align: center;
 
         .side-item {
-            margin-top: 0.5rem;
+            margin-top: 0.8rem;
+            @media only screen and (min-width: 768px) {
+                margin-top: 0.5rem;    
+            }
             cursor: pointer;
         }
     }

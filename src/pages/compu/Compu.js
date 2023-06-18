@@ -15,7 +15,8 @@ function Welcome() {
       Aca esta la <a href='https://computacion.dc.uba.ar/' target='_blank'>pagina de la carrera</a> y 
       un <a href='https://visualizador-encuestas.exactas.uba.ar/index.html' target='_blank'>visualizador de encuestas</a>.
       </p>
-    <img src={plan}/>
+      
+      <img src={plan}/>
   </div>
   )
 }
