@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import '../../assets/styles/components.scss'
 import '../../assets/styles/compu.scss'
 import plan from '../../assets/images/plan-compu.png'
-import planNuevo from '../../assets/images/plan-compu-nuevo.png'
+import planNuevo from '../../assets/images/plan-compu-nuevo-4.png'
 import Sidebar from '../../components/Sidebar.js'
 import Materia from '../../components/Materia.js'
 import {useParams} from 'react-router-dom'
@@ -29,7 +29,7 @@ function Welcome({planEstudios, setPlanEstudios}) {
 }
 
 export default function Compu({resueltos, cargado}) {
-  const [planEstudios, setPlanEstudios] = useState('nuevo')
+  const [planEstudios, setPlanEstudios] = useState('viejo')
   const {materia} = useParams()
 
   const materiasViejo = [
