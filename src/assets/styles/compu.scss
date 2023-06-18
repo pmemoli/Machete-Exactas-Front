@@ -6,6 +6,18 @@ $font: 'Dosis', sans-serif;
     justify-content: space-between;
     position: relative;
 
+    #header-compu {
+        display: flex;
+        align-items: center;
+
+        button {
+            margin-left: 2rem;
+            font-size: 1.4rem;
+            border-radius: 8px;
+            padding: 0.5rem;
+        }
+    }
+
     h1 {
         font-size: 3rem;
         margin-bottom: 0.6rem;
