@@ -111,12 +111,13 @@ $font: 'Dosis', sans-serif;
 @media (max-device-width: 660px) {
     #nav {
         .title {
-            font-size: 11vh;
+            font-size: 13vh;
         }
 
         .pages-list {
+            gap: 3.5rem;
             .page {
-                font-size: 6vh;
+                font-size: 6.5vh;
             }
 
             padding-right: 1rem;
