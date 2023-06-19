@@ -117,10 +117,12 @@ $font: 'Dosis', sans-serif;
         .pages-list {
             .page {
                 font-size: 6vh;
-                gap: 0vw;
-                margin-left: 3vw;
-                margin-right: 3vw;
             }
+
+            padding-right: 1rem;
+            padding-left: 1rem;
+
+            padding-bottom: 1.2rem;
         }
     }
 
