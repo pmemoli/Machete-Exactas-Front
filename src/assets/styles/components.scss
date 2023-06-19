@@ -45,7 +45,7 @@ $font: 'Dosis', sans-serif;
     min-width: 100vw;
 
     .title {
-        font-size: 2.6rem;
+        font-size: 2.5rem;
         @include clean-link();
     }
 
@@ -59,7 +59,7 @@ $font: 'Dosis', sans-serif;
 
         .page {
             @include clean-link();
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             &:hover {
                 color: rgb(188, 188, 188);
             }
