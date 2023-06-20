@@ -7,7 +7,6 @@ import Mate from './pages/mate/Mate.js'
 import Fisica from './pages/fisica/Fisica.js'
 import Compu from './pages/compu/Compu.js'
 import Datos from './pages/datos/Datos.js'
-import Cbc from './pages/cbc/Cbc'
 import Instrucciones from './pages/instrucciones/Instrucciones.js'
 import Fuentes from './pages/fuentes/Fuentes.js'
 import axios from 'axios'
@@ -59,9 +58,6 @@ function App() {
 
           <Route path="/fisica" element={<Fisica resueltos={resueltos} cargado={cargado}/>}/>
           <Route path="/fisica/:materia" element={<Fisica resueltos={resueltos} cargado={cargado}/>}/>
-
-          <Route path="/cbc" element={<Cbc resueltos={resueltos} cargado={cargado}/>}/>
-          <Route path="/cbc/:materia" element={<Cbc resueltos={resueltos} cargado={cargado}/>}/>
         </Routes>
       </div>
 

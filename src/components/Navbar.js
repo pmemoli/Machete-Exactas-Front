@@ -11,7 +11,6 @@ export default function Navbar({setOriginal}) {
           <li><Link to='../compu' className='page' onClick={() => setOriginal(true)}>Computacion</Link></li>
           <li><Link to='../datos' className='page' onClick={() => setOriginal(true)}>Datos</Link></li>
           <li><Link to='../fisica' className='page' onClick={() => setOriginal(true)}>Fisica</Link></li>
-          <li><Link to='../cbc' className='page' onClick={() => setOriginal(true)}>Cbc</Link></li>
         </ul>
     </nav>
   )
