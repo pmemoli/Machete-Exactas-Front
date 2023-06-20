@@ -3,8 +3,8 @@ import '../../assets/styles/components.scss'
 import '../../assets/styles/mate.scss'
 import Sidebar from '../../components/Sidebar.js'
 import Materia from '../../components/Materia.js'
-import planA from '../../assets/images/plan-aplicada.png'
-import planP from '../../assets/images/plan-pura.png'
+import planA from '../../assets/images/plan-aplicada-transp-3.png'
+import planP from '../../assets/images/plan-pura-transp.png'
 import {useParams} from 'react-router-dom'
 
 function Welcome() {
@@ -12,7 +12,7 @@ function Welcome() {
     <div className='content'>
       <h1>Matematica</h1>
       <p>
-      Material para la carrera de Ciencias Matematicas.
+      Material para ambas orientaciones de la carrera de Ciencias Matematicas.
       Aca esta la <a href='https://cms.dm.uba.ar/academico/materias/' target='_blank'>pagina de la carrera</a> y 
       un <a href='https://visualizador-encuestas.exactas.uba.ar/index.html' target='_blank'>visualizador de encuestas</a>.
       </p>
