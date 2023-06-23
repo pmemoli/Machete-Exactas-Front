@@ -30,7 +30,7 @@ export default function Mate({resueltos, cargado}) {
 
   const materias = [
     'Análisis 1', 'Álgebra 1', 'Taller de Cálculo Avanzado', 'Álgebra Lineal', 'Análisis 2', 'Cálculo Avanzado',
-    'Cálculo Numérico', 'Probabilidad y Estadistica (M)', 'Análisis Complejo', 'Análisis Real', 'Álgebra 2',
+    'Cálculo Numérico', 'Probabilidad y Estadística (M)', 'Análisis Complejo', 'Análisis Real', 'Álgebra 2',
     'Topología', 'Geometría Proyectiva', 'Análisis Funcional', 'Geometría Diferencial', 'Ecuaciones Diferenciales',
     'Álgebra 3', 'Intro. a la Computación', 'Estadística', 'Inv. Operativa', 'Temas de Física', 'Optimización',
     'Análisis Numérico'
