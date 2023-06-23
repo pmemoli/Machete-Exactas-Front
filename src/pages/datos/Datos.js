@@ -12,7 +12,7 @@ function Welcome() {
       <h1>Datos</h1>
       <p>
       Material para la carrera de Ciencia de Datos.
-      Aca esta la <a href='https://lcd.exactas.uba.ar/' target='_blank'>pagina de la carrera</a> y 
+      Acá esta la <a href='https://lcd.exactas.uba.ar/' target='_blank'>página de la carrera</a> y 
       un <a href='https://visualizador-encuestas.exactas.uba.ar/index.html' target='_blank'>visualizador de encuestas</a>.
       </p>
     <img src={plan}/>
@@ -24,8 +24,8 @@ export default function Datos({resueltos, cargado}) {
   const {materia} = useParams()
   
   const materias = [
-     'Analisis 1', 'Algebra 1', 'Algoritmos 1', 'Analisis 2', 'Algoritmos 2', 'Analisis Avanzado',
-     'Alg. Lineal Computacional', 'Laboratorio de Datos', 'Probabilidad', 'Algoritmos 3', 'Intr. al Modelado Continuo',
+     'Análisis 1', 'Álgebra 1', 'Algoritmos 1', 'Análisis 2', 'Algoritmos 2', 'Análisis Avanzado',
+     'Álg. Lineal Computacional', 'Laboratorio de Datos', 'Probabilidad', 'Algoritmos 3', 'Intr. al Modelado Contínuo',
      'Intr. a la Est. y Cs. de Datos', 'Intr. a la Inv. Oper. y Opt.'
   ]
 

@@ -8,10 +8,10 @@ export default function Materia({nombre, resueltos, cargado}) {
   const [tipoRes, setTipoRes] = useState('')
   const [resueltosMateria, setResueltosMateria] = useState([])
 
-  if (nombre == 'Matematica 1' || nombre == 'Analisis 2 (C)') nombre = 'Analisis 1'
-  if (nombre == 'Matematica 3') nombre = 'Analisis 2'
-  if (nombre == 'Probabilidad') nombre = 'Probabilidad Y Estadistica (M)'
-  if (nombre == 'Intr. a la Est. y Cs. de Datos') nombre = 'Estadistica'
+  if (nombre == 'Matemática 1' || nombre == 'Análisis 2 (C)') nombre = 'Análisis 1'
+  if (nombre == 'Matemática 3') nombre = 'Análisis 2'
+  if (nombre == 'Probabilidad') nombre = 'Probabilidades y Estadística (M)'
+  if (nombre == 'Intr. a la Est. y Cs. de Datos') nombre = 'Estadística'
   if (nombre == 'Intr. a la Inv. Oper. y Opt.') nombre = 'Inv. Operativa'
  
   const nombreMateria = nombre.replaceAll(' ', '_').toLowerCase()
@@ -45,7 +45,7 @@ export default function Materia({nombre, resueltos, cargado}) {
         <Resueltos nombre='Primeros Parciales' tipoResuelto='primeros-parciales' handleModal={handleModalDisplay} resueltos={resueltosMateria}/>
         <Resueltos nombre='Segundos Parciales' tipoResuelto='segundos-parciales' handleModal={handleModalDisplay} resueltos={resueltosMateria}/>
         <Resueltos nombre='Finales' tipoResuelto='finales' handleModal={handleModalDisplay} resueltos={resueltosMateria}/>
-        <Resueltos nombre='Guias Resueltas' tipoResuelto='guias-resueltas' handleModal={handleModalDisplay} resueltos={resueltosMateria}/>
+        <Resueltos nombre='Guías Resueltas' tipoResuelto='guias-resueltas' handleModal={handleModalDisplay} resueltos={resueltosMateria}/>
         <Resueltos nombre='Apuntes y Clases' tipoResuelto='apuntes-clases' handleModal={handleModalDisplay} resueltos={resueltosMateria}/>
         <Resueltos nombre='Complementos' tipoResuelto='complementos' handleModal={handleModalDisplay} resueltos={resueltosMateria}/>
       </div>

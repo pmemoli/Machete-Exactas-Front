@@ -18,13 +18,13 @@ export default function ModalFile({modalDisplay, typeRef, nombreMateria, setModa
     async function uploadFile() {
       try {
         if (file === 'None') {
-          alert('No se subio ningun archivo')
+          alert('No se subió ningún archivo')
           setSubiendo(false)
           return
         }
 
         if (file.size > 4.5 * 1024 * 1024) {
-          alert('Archivo mayor a 4.5mb. Se puede comprimir o subir a un drive y compartir el link!')
+          alert('Archivo mayor a 4.5mb. ¡Se puede comprimir o subir a un drive y compartir el link!')
           setSubiendo(false)
           return
         }
@@ -43,7 +43,7 @@ export default function ModalFile({modalDisplay, typeRef, nombreMateria, setModa
         const res = await axiosResueltos.post(`/${token}/uploadFile`, bodyFormData, {headers: {"Content-Type": "multipart/form-data"}})
         
         if (res.data.message === 'Posted') {
-            alert('Se subio y mando a moderar correctamente!')
+            alert('¡Se subió y mandó a moderar correctamente!')
             setModalDisplay('no-display')
             captchaResponse.current.reset()
         }
@@ -53,7 +53,7 @@ export default function ModalFile({modalDisplay, typeRef, nombreMateria, setModa
         }
 
         else if (res.data.message === 'Failed Captcha') {
-          alert('Fallo en validarse el captcha. Si tocaste "subir resuelto" muchas veces puede haberlo rechazado por spam. Proba cerrar la pestaña y reintentar.')
+          alert('Falló en validarse el captcha. Si tocaste "subir resuelto" muchas veces puede haberlo rechazado por spam. Probá cerrar la pestaña y reintentar.')
         }
 
         setSubiendo(false)

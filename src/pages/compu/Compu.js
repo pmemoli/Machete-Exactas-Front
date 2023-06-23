@@ -19,9 +19,9 @@ function Welcome({planEstudios, setPlanEstudios}) {
       
       <p>
         Material para la carrera de Ciencias de la Computacion.
-        Aca esta la <a href='https://computacion.dc.uba.ar/' target='_blank'>pagina de la carrera</a> y 
+        Acá esta la <a href='https://computacion.dc.uba.ar/' target='_blank'>página de la carrera</a> y 
         un <a href='https://visualizador-encuestas.exactas.uba.ar/index.html' target='_blank'>visualizador de encuestas</a>.
-        En <a href='https://docs.google.com/document/d/e/2PACX-1vSlD-djaJcnw45-41ugO5yGqNl5hA_dKOAikyRDAh5QzsrToBi2XWPzU1i0ldDAbNct0rx2AfhuBf19/pub' targe='_blank'>esta pagina</a> hay mucha informacion del nuevo plan. 
+        En <a href='https://docs.google.com/document/d/e/2PACX-1vSlD-djaJcnw45-41ugO5yGqNl5hA_dKOAikyRDAh5QzsrToBi2XWPzU1i0ldDAbNct0rx2AfhuBf19/pub' targe='_blank'>esta página</a> hay mucha informacion del nuevo plan. 
       </p>
       
       <img src={planEstudios === 'viejo' ? plan : planNuevo}/>
@@ -30,20 +30,20 @@ function Welcome({planEstudios, setPlanEstudios}) {
 }
 
 export default function Compu({resueltos, cargado}) {
-  const [planEstudios, setPlanEstudios] = useState('viejo')
+  const [planEstudios, setPlanEstudios] = useState('nuevo')
   const {materia} = useParams()
 
   const materiasViejo = [
-     'Analisis 2 (C)', 'Algebra 1', 'Probabilidad y Estadistica (C)', 'Algoritmos 1', 'Metodos Numericos',
-     'Organizacion del Comp. 1', 'Algoritmos 2', 'Organizacion del Comp. 2', 'Algoritmos 3', 'Logica y Computabilidad',
-     'Sistemas Operativos', 'Ingenieria 1', 'Paradigmas de Prog.', 'Teoria de Lenguajes', 'Teoria de las Com.',
-     'Base de Datos', 'Ingenieria 2'
+     'Análisis 2 (C)', 'Álgebra 1', 'Probabilidad y Estadística (C)', 'Algoritmos 1', 'Métodos Numericos',
+     'Organización del Comp. 1', 'Algoritmos 2', 'Organización del Comp. 2', 'Algoritmos 3', 'Lógica y Computabilidad',
+     'Sistemas Operativos', 'Ingeniería 1', 'Paradigmas de Prog.', 'Teoría de Lenguajes', 'Teoría de las Com.',
+     'Base de Datos', 'Ingeniería 2'
   ]
 
   const materiasNuevo = [
-    'Intro. a la Programacion', 'Algebra 1', 'Algoritmos y estructuras de datos', 'Analisis 1', 'Paradigmas de Prog. (N)', 'Tecnicas de diseño de algoritmos',
-    'Sistemas Digitales', 'Lenguajes Formales', 'Arquitectura y Organizacion', 'Algebra Lineal Comp. (C)', 'Complejidad Computacional', 'Sistemas Operativos (N)',
-    'Estadistica Computacional', 'Almacenamiento y recuperacion de informacion', 'Programacion concurrente y paralela', 'Redes de Comunicaciones'
+    'Intro. a la Programación', 'Álgebra 1', 'Algoritmos y Estructuras de Datos', 'Análisis 1', 'Paradigmas de Prog. (N)', 'Técnicas de Diseño de Algoritmos',
+    'Sistemas Digitales', 'Lenguajes Formales', 'Arquitectura y Organización', 'Álgebra Lineal Comp. (C)', 'Complejidad Computacional', 'Sistemas Operativos (N)',
+    'Estadística Computacional', 'Almacenamiento y recuperacion de información', 'Programacion Concurrente y Paralela', 'Redes de Comunicaciones'
   ]
 
   function renderContent() {

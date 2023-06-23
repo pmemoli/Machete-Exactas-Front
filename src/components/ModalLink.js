@@ -36,7 +36,7 @@ export default function ModalLink({modalDisplay, typeRef, nombreMateria, setModa
         }
 
         if (!(title !== '' && link !== '' && validateLink(link) && title.length < 140)) {
-            alert('Link invalido. Tiene que empezar con https:// y ser de drive, github, imgur o paginas del dm o df')
+            alert('Link inválido. Tiene que empezar con https:// y ser de drive, github, imgur o paginas del dm o df.')
             return
         }
 
@@ -53,7 +53,7 @@ export default function ModalLink({modalDisplay, typeRef, nombreMateria, setModa
         if (res.data.message === 'Posted') {
             console.log(`Uploaded ${title}`)
             setModalDisplay('no-display')
-            alert('Se subio y mando a moderar correctamente!')
+            alert('¡Se subió y mandó a moderar correctamente!')
             captchaResponse.current.reset()
         }
 
@@ -62,7 +62,7 @@ export default function ModalLink({modalDisplay, typeRef, nombreMateria, setModa
         }
 
         else if (res.data.message === 'Failed Captcha') {
-          alert('Fallo en validarse el captcha. Si tocaste "subir resuelto" muchas veces puede haberlo rechazado por spam. Proba cerrar la pestaña y reintentar.')
+          alert('Falló en validarse el captcha. Si tocaste "subir resuelto" muchas veces puede haberlo rechazado por spam. Probá cerrar la pestaña y reintentar.')
         }
         
         setSubiendo(false)
