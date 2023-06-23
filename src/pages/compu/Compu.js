@@ -21,7 +21,7 @@ function Welcome({planEstudios, setPlanEstudios}) {
         Material para la carrera de Ciencias de la Computación.
         Acá está la <a href='https://computacion.dc.uba.ar/' target='_blank'>página de la carrera</a> y 
         un <a href='https://visualizador-encuestas.exactas.uba.ar/index.html' target='_blank'>visualizador de encuestas</a>.
-        En <a href='https://docs.google.com/document/d/e/2PACX-1vSlD-djaJcnw45-41ugO5yGqNl5hA_dKOAikyRDAh5QzsrToBi2XWPzU1i0ldDAbNct0rx2AfhuBf19/pub' targe='_blank'>esta página</a> hay mucha informacion del nuevo plan. 
+        En <a href='https://docs.google.com/document/d/e/2PACX-1vSlD-djaJcnw45-41ugO5yGqNl5hA_dKOAikyRDAh5QzsrToBi2XWPzU1i0ldDAbNct0rx2AfhuBf19/pub' targe='_blank'>esta página</a> hay mucha información del nuevo plan. 
       </p>
       
       <img src={planEstudios === 'viejo' ? plan : planNuevo}/>
@@ -43,7 +43,7 @@ export default function Compu({resueltos, cargado}) {
   const materiasNuevo = [
     'Intro. a la Programación', 'Álgebra 1', 'Algoritmos y Estructuras de Datos', 'Análisis 1', 'Paradigmas de Prog. (N)', 'Técnicas de Diseño de Algoritmos',
     'Sistemas Digitales', 'Lenguajes Formales', 'Arquitectura y Organización', 'Álgebra Lineal Comp. (C)', 'Complejidad Computacional', 'Sistemas Operativos (N)',
-    'Estadística Computacional', 'Almacenamiento y recuperacion de información', 'Programacion Concurrente y Paralela', 'Redes de Comunicaciones'
+    'Estadística Computacional', 'Almacenamiento y recuperación de información', 'Programación Concurrente y Paralela', 'Redes de Comunicaciones'
   ]
 
   function renderContent() {

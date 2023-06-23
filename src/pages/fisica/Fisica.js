@@ -25,7 +25,7 @@ export default function Fisica({resueltos, cargado}) {
 
   const materias = [
     'Física 1', 'Matemática 1', 'Laboratorio 1', 'Física 2', 'Matemática 2', 'Matemática 3', 'Laboratorio 2', 'Calculo Numérico',
-    'Física 3', 'Matemática 4', 'Laboratorio 3', 'Física 4', 'Mecanica Clasica', 'Física Teórica 1', 'Laboratorio 4',
+    'Física 3', 'Matemática 4', 'Laboratorio 3', 'Física 4', 'Mecánica Clásica', 'Física Teórica 1', 'Laboratorio 4',
     'Física Teórica 2', 'Física Teórica 3', 'Laboratorio 5', 'Estructura 1', 'Estructura 2', 'Laboratorio 6', 'Laboratorio 7',
     'Estructura 3', 'Estructura 4'
   ]

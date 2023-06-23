@@ -97,7 +97,7 @@ export default function ModalFile({modalDisplay, typeRef, nombreMateria, setModa
 
           Archivos pdf, jpg o png de hasta 4.5mb. En el nombre cuatrimestre y año.<br/>
 
-          Si desaparece "Subiendo..." sin explicacion volver a intentar. <br/>
+          Si desaparece "Subiendo..." sin explicación volver a intentar. <br/>
 
           <div className='upload-area'>
             <div id='captcha'>
