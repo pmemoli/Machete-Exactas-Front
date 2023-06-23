@@ -10,9 +10,9 @@ import {useParams} from 'react-router-dom'
 function Welcome() {
   return (
     <div className='content'>
-      <h1>Matematica</h1>
+      <h1>Matemática</h1>
       <p>
-      Material para ambas orientaciones de la carrera de Ciencias Matematicas.
+      Material para ambas orientaciones de la carrera de Ciencias Matemáticas.
       Acá esta la <a href='https://cms.dm.uba.ar/academico/materias/' target='_blank'>página de la carrera</a> y 
       un <a href='https://visualizador-encuestas.exactas.uba.ar/index.html' target='_blank'>visualizador de encuestas</a>.
       </p>

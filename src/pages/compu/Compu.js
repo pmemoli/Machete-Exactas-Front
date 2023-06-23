@@ -13,12 +13,12 @@ function Welcome({planEstudios, setPlanEstudios}) {
   return (
     <div className='content'>
       <div id='header-compu'>
-        <h1>Computacion</h1>
+        <h1>Computación</h1>
         <button onClick={() => setPlanEstudios(opuesto)}>Cambiar al plan {opuesto}</button>
       </div>
       
       <p>
-        Material para la carrera de Ciencias de la Computacion.
+        Material para la carrera de Ciencias de la Computación.
         Acá esta la <a href='https://computacion.dc.uba.ar/' target='_blank'>página de la carrera</a> y 
         un <a href='https://visualizador-encuestas.exactas.uba.ar/index.html' target='_blank'>visualizador de encuestas</a>.
         En <a href='https://docs.google.com/document/d/e/2PACX-1vSlD-djaJcnw45-41ugO5yGqNl5hA_dKOAikyRDAh5QzsrToBi2XWPzU1i0ldDAbNct0rx2AfhuBf19/pub' targe='_blank'>esta página</a> hay mucha informacion del nuevo plan. 
