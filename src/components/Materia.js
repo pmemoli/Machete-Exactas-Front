@@ -10,7 +10,7 @@ export default function Materia({nombre, resueltos, cargado}) {
 
   if (nombre == 'Matemática 1' || nombre == 'Análisis 2 (C)') nombre = 'Análisis 1'
   if (nombre == 'Matemática 3') nombre = 'Análisis 2'
-  if (nombre == 'Probabilidad') nombre = 'Probabilidades y Estadística (M)'
+  if (nombre == 'Probabilidad') nombre = 'Probabilidad y Estadística (M)'
   if (nombre == 'Intr. a la Est. y Cs. de Datos') nombre = 'Estadística'
   if (nombre == 'Intr. a la Inv. Oper. y Opt.') nombre = 'Inv. Operativa'
  
