@@ -31,7 +31,7 @@ export default function ModalLink({modalDisplay, typeRef, nombreMateria, setModa
         const [title, link] = [titleRef.current.value, linkRef.current.value]
 
         if (token === '') {
-          alert('Hay que llenar el captcha!')
+          alert('¡Hay que llenar el captcha!')
           return
         }
 
