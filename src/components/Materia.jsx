@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Resueltos from './Resueltos.js';
-import Modal from './Modal.js';
+import Resueltos from './Resueltos';
+import Modal from './Modal';
 import '../assets/styles/materia.scss';
 
 export default function Materia({ nombre, resueltos, cargado }) {

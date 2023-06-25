@@ -3,8 +3,8 @@ import '../../assets/styles/components.scss';
 import '../../assets/styles/compu.scss';
 import plan from '../../assets/images/plan-compu.png';
 import planNuevo from '../../assets/images/plan-compu-nuevo-4.png';
-import Sidebar from '../../components/Sidebar.jsx';
-import Materia from '../../components/Materia.jsx';
+import Sidebar from '../../components/Sidebar';
+import Materia from '../../components/Materia';
 import { useParams } from 'react-router-dom';
 
 function Welcome({ planEstudios, setPlanEstudios }) {

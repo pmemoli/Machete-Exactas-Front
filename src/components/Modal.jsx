@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ModalLink from './ModalLink.js';
-import ModalFile from './ModalFile.js';
+import ModalLink from './ModalLink';
+import ModalFile from './ModalFile';
 
 export default function Modal({
     modalDisplay,
