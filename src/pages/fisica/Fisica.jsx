@@ -9,14 +9,14 @@ import { useParams } from 'react-router-dom';
 function Welcome() {
     return (
         <div className="content">
-            <h1>Fisica</h1>
+            <h1>Física</h1>
             <p>
-                Material para la carrera de Ciencias Fisicas. Aca esta la{' '}
+                Material para la carrera de Ciencias Físicas. Acá está la{' '}
                 <a
                     href="https://www.df.uba.ar/es/docentes/paginas-de-materias"
                     target="_blank"
                 >
-                    pagina de la carrera
+                    página de la carrera
                 </a>{' '}
                 y un{' '}
                 <a
@@ -36,23 +36,23 @@ export default function Fisica({ resueltos, cargado }) {
     const { materia } = useParams();
 
     const materias = [
-        'Fisica 1',
-        'Matematica 1',
+        'Física 1',
+        'Matemática 1',
         'Laboratorio 1',
-        'Fisica 2',
-        'Matematica 2',
-        'Matematica 3',
+        'Física 2',
+        'Matemática 2',
+        'Matemática 3',
         'Laboratorio 2',
-        'Calculo Numerico',
-        'Fisica 3',
-        'Matematica 4',
+        'Calculo Numérico',
+        'Física 3',
+        'Matemática 4',
         'Laboratorio 3',
-        'Fisica 4',
-        'Mecanica Clasica',
-        'Fisica Teorica 1',
+        'Física 4',
+        'Mecánica Clásica',
+        'Física Teórica 1',
         'Laboratorio 4',
-        'Fisica Teorica 2',
-        'Fisica Teorica 3',
+        'Física Teórica 2',
+        'Física Teórica 3',
         'Laboratorio 5',
         'Estructura 1',
         'Estructura 2',

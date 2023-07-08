@@ -12,6 +12,8 @@ import Fuentes from './pages/fuentes/Fuentes';
 import axios from 'axios';
 import Footer from './components/Footer';
 
+// TODO: Cambiar esto a una variable de entorno o que dependa si es dev o prod
+// const backSource = 'https://www.machete-exactas.com/';
 const backSource = '';
 
 const axiosResueltos = axios.create({

@@ -13,17 +13,17 @@ function Welcome({ planEstudios, setPlanEstudios }) {
     return (
         <div className="content">
             <div id="header-compu">
-                <h1>Computacion</h1>
+                <h1>Computación</h1>
                 <button onClick={() => setPlanEstudios(opuesto)}>
                     Cambiar al plan {opuesto}
                 </button>
             </div>
 
             <p>
-                Material para la carrera de Ciencias de la Computacion. Aca esta
+                Material para la carrera de Ciencias de la Computación. Acá está
                 la{' '}
                 <a href="https://computacion.dc.uba.ar/" target="_blank">
-                    pagina de la carrera
+                    página de la carrera
                 </a>{' '}
                 y un{' '}
                 <a
@@ -37,9 +37,9 @@ function Welcome({ planEstudios, setPlanEstudios }) {
                     href="https://docs.google.com/document/d/e/2PACX-1vSlD-djaJcnw45-41ugO5yGqNl5hA_dKOAikyRDAh5QzsrToBi2XWPzU1i0ldDAbNct0rx2AfhuBf19/pub"
                     targe="_blank"
                 >
-                    esta pagina
+                    esta página
                 </a>{' '}
-                hay mucha informacion del nuevo plan.
+                hay mucha información del nuevo plan.
             </p>
 
             <img src={planEstudios === 'viejo' ? plan : planNuevo} />
@@ -52,41 +52,41 @@ export default function Compu({ resueltos, cargado }) {
     const { materia } = useParams();
 
     const materiasViejo = [
-        'Analisis 2 (C)',
-        'Algebra 1',
-        'Probabilidad y Estadistica (C)',
+        'Análisis 2 (C)',
+        'Álgebra 1',
+        'Probabilidad y Estadística (C)',
         'Algoritmos 1',
-        'Metodos Numericos',
-        'Organizacion del Comp. 1',
+        'Métodos Numericos',
+        'Organización del Comp. 1',
         'Algoritmos 2',
-        'Organizacion del Comp. 2',
+        'Organización del Comp. 2',
         'Algoritmos 3',
-        'Logica y Computabilidad',
+        'Lógica y Computabilidad',
         'Sistemas Operativos',
-        'Ingenieria 1',
+        'Ingeniería 1',
         'Paradigmas de Prog.',
-        'Teoria de Lenguajes',
-        'Teoria de las Com.',
+        'Teoría de Lenguajes',
+        'Teoría de las Com.',
         'Base de Datos',
-        'Ingenieria 2',
+        'Ingeniería 2',
     ];
 
     const materiasNuevo = [
-        'Intro. a la Programacion',
-        'Algebra 1',
-        'Algoritmos y estructuras de datos',
-        'Analisis 1',
+        'Intro. a la Programación',
+        'Álgebra 1',
+        'Algoritmos y Estructuras de Datos',
+        'Análisis 1',
         'Paradigmas de Prog. (N)',
-        'Tecnicas de diseño de algoritmos',
+        'Técnicas de Diseño de Algoritmos',
         'Sistemas Digitales',
         'Lenguajes Formales',
-        'Arquitectura y Organizacion',
-        'Algebra Lineal Comp. (C)',
+        'Arquitectura y Organización',
+        'Álgebra Lineal Comp. (C)',
         'Complejidad Computacional',
         'Sistemas Operativos (N)',
-        'Estadistica Computacional',
-        'Almacenamiento y recuperacion de informacion',
-        'Programacion concurrente y paralela',
+        'Estadística Computacional',
+        'Almacenamiento y recuperación de información',
+        'Programación Concurrente y Paralela',
         'Redes de Comunicaciones',
     ];
 

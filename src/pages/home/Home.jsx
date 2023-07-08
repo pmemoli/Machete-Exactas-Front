@@ -9,13 +9,13 @@ export default function Home() {
             <div className="content">
                 <h1>Bienvenid@s</h1>
                 <p>
-                    Esta es una pagina con resueltos, apuntes y complementos
-                    para las materias que se dan en el pabellon 1 y el 0+inf de
-                    la facultad de ciencias exactas y naturales en la UBA.
-                    Cualquiera puede contribuir con material yendo a la pagina
-                    de la materia. Pueden tardar un tiempo en aparecer despues
-                    de subirse por razones de moderacion. Abajo de todo esta la
-                    pagina de github con el codigo fuente y el mail de contacto
+                    Esta es una página con resueltos, apuntes y complementos
+                    para las materias que se dan en el pabellón 1 y el 0+inf de
+                    la Facultad de Ciencias Exactas y Naturales en la UBA.
+                    Cualquiera puede contribuir con material yendo a la página
+                    de la materia. Pueden tardar un tiempo en aparecer después
+                    de subirse por razones de moderación. Abajo de todo esta la
+                    página de github con el código fuente y el mail de contacto
                     para tirar recomendaciones y mejoras. Los resueltos
                     iniciales provienen de Cubawiki, Les Noetheries y Estufis
                     (ver otras fuentes).

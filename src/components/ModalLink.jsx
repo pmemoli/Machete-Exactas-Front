@@ -41,7 +41,7 @@ export default function ModalLink({
             ];
 
             if (token === '') {
-                alert('Hay que llenar el captcha!');
+                alert('¡Hay que llenar el captcha!');
                 return;
             }
 
@@ -54,7 +54,7 @@ export default function ModalLink({
                 )
             ) {
                 alert(
-                    'Link invalido. Tiene que empezar con https:// y ser de drive, github, imgur o paginas del dm o df',
+                    'Link inválido. Tiene que empezar con https:// y ser de drive, github, imgur o paginas del dm o df.',
                 );
                 return;
             }
@@ -72,7 +72,7 @@ export default function ModalLink({
             if (res.data.message === 'Posted') {
                 console.log(`Uploaded ${title}`);
                 setModalDisplay('no-display');
-                alert('Se subio y mando a moderar correctamente!');
+                alert('¡Se subió y mandó a moderar correctamente!');
                 captchaResponse.current.reset();
             } else if (
                 res.data.message === 'Demasiados resueltos para moderar'
@@ -82,7 +82,7 @@ export default function ModalLink({
                 );
             } else if (res.data.message === 'Failed Captcha') {
                 alert(
-                    'Fallo en validarse el captcha. Si tocaste "subir resuelto" muchas veces puede haberlo rechazado por spam. Proba cerrar la pestaña y reintentar.',
+                    'Falló en validarse el captcha. Si tocaste "subir resuelto" muchas veces puede haberlo rechazado por spam. Probá cerrar la pestaña y reintentar.',
                 );
             }
 

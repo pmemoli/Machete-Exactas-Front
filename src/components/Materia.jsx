@@ -1,22 +1,28 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Resueltos from './Resueltos';
 import Modal from './Modal';
 import '../assets/styles/materia.scss';
+
+function removerAcentos(str) {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
 
 export default function Materia({ nombre, resueltos, cargado }) {
     const [modalDisplay, setModalDisplay] = useState('no-display');
     const [tipoRes, setTipoRes] = useState('');
     const [resueltosMateria, setResueltosMateria] = useState([]);
 
-    if (nombre == 'Matematica 1' || nombre == 'Analisis 2 (C)')
-        nombre = 'Analisis 1';
-    if (nombre == 'Matematica 3') nombre = 'Analisis 2';
-    if (nombre == 'Probabilidad') nombre = 'Probabilidad Y Estadistica (M)';
-    if (nombre == 'Intr. a la Est. y Cs. de Datos') nombre = 'Estadistica';
+    if (nombre == 'Matemática 1' || nombre == 'Análisis 2 (C)')
+        nombre = 'Análisis 1';
+    if (nombre == 'Matemática 3') nombre = 'Análisis 2';
+    if (nombre == 'Probabilidad') nombre = 'Probabilidad y Estadística (M)';
+    if (nombre == 'Intr. a la Est. y Cs. de Datos') nombre = 'Estadística';
     if (nombre == 'Intr. a la Inv. Oper. y Opt.') nombre = 'Inv. Operativa';
 
-    const nombreMateria = nombre.replaceAll(' ', '_').toLowerCase();
-    const yearRegex = /20\d\d/;
+    const nombreMateria = removerAcentos(
+        nombre.replaceAll(' ', '_').toLowerCase(),
+    );
+    // const yearRegex = /20\d\d/;
 
     useEffect(() => {
         setResueltosMateria(
@@ -69,7 +75,7 @@ export default function Materia({ nombre, resueltos, cargado }) {
                         resueltos={resueltosMateria}
                     />
                     <Resueltos
-                        nombre="Guias Resueltas"
+                        nombre="Guías Resueltas"
                         tipoResuelto="guias-resueltas"
                         handleModal={handleModalDisplay}
                         resueltos={resueltosMateria}

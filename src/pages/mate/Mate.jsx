@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../../assets/styles/components.scss';
 import '../../assets/styles/mate.scss';
 import Sidebar from '../../components/Sidebar';
@@ -10,15 +10,15 @@ import { useParams } from 'react-router-dom';
 function Welcome() {
     return (
         <div className="content">
-            <h1>Matematica</h1>
+            <h1>Matemática</h1>
             <p>
                 Material para ambas orientaciones de la carrera de Ciencias
-                Matematicas. Aca esta la{' '}
+                Matemáticas. Acá está la{' '}
                 <a
                     href="https://cms.dm.uba.ar/academico/materias/"
                     target="_blank"
                 >
-                    pagina de la carrera
+                    página de la carrera
                 </a>{' '}
                 y un{' '}
                 <a
@@ -26,6 +26,13 @@ function Welcome() {
                     target="_blank"
                 >
                     visualizador de encuestas
+                </a>
+                . Muchas materias se dan en el{' '}
+                <a
+                    href="https://ic.fcen.uba.ar/actividades-academicas/formacion/materias"
+                    target="_blank"
+                >
+                    instituto de calculo
                 </a>
                 .
             </p>
@@ -42,29 +49,29 @@ export default function Mate({ resueltos, cargado }) {
     const { materia } = useParams();
 
     const materias = [
-        'Analisis 1',
-        'Algebra 1',
-        'Taller de Calculo Avanzado',
-        'Algebra Lineal',
-        'Analisis 2',
-        'Calculo Avanzado',
-        'Calculo numerico',
-        'Probabilidad y Estadistica (M)',
-        'Analisis Complejo',
-        'Analisis Real',
-        'Algebra 2',
-        'Topologia',
-        'Geometria Proyectiva',
-        'Analisis Funcional',
-        'Geometria Diferencial',
+        'Análisis 1',
+        'Álgebra 1',
+        'Taller de Cálculo Avanzado',
+        'Álgebra Lineal',
+        'Análisis 2',
+        'Cálculo Avanzado',
+        'Cálculo Numérico',
+        'Probabilidad y Estadística (M)',
+        'Análisis Complejo',
+        'Análisis Real',
+        'Álgebra 2',
+        'Topología',
+        'Geometría Proyectiva',
+        'Análisis Funcional',
+        'Geometría Diferencial',
         'Ecuaciones Diferenciales',
-        'Algebra 3',
-        'Intro. a la Computacion',
-        'Estadistica',
+        'Álgebra 3',
+        'Intro. a la Computación',
+        'Estadística',
         'Inv. Operativa',
-        'Temas de Fisica',
-        'Optimizacion',
-        'Analisis Numerico',
+        'Temas de Física',
+        'Optimización',
+        'Análisis Numérico',
     ];
 
     function renderContent() {

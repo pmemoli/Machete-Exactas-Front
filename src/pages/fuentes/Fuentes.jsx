@@ -12,7 +12,7 @@ export default function Fuentes() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        CubaWiki-Computacion
+                        CubaWiki-Computación
                     </a>
                 </li>
                 <li>
@@ -21,7 +21,7 @@ export default function Fuentes() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        Les Noetheries-Matematica
+                        Les Noetheries-Matemática
                     </a>
                 </li>
                 <li>
@@ -30,7 +30,7 @@ export default function Fuentes() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        Estufis-Fisica
+                        Estufis-Física
                     </a>
                 </li>
                 <li>
@@ -39,7 +39,7 @@ export default function Fuentes() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        Altillo-Cbc
+                        Altillo-CBC
                     </a>
                 </li>
             </ul>

@@ -23,14 +23,14 @@ export default function ModalFile({
     async function uploadFile() {
         try {
             if (file === 'None') {
-                alert('No se subio ningun archivo');
+                alert('No se subió ningún archivo');
                 setSubiendo(false);
                 return;
             }
 
             if (file.size > 4.5 * 1024 * 1024) {
                 alert(
-                    'Archivo mayor a 4.5mb. Se puede comprimir o subir a un drive y compartir el link!',
+                    'Archivo mayor a 4.5mb. ¡Se puede comprimir o subir a un drive y compartir el link!',
                 );
                 setSubiendo(false);
                 return;
@@ -54,7 +54,7 @@ export default function ModalFile({
             );
 
             if (res.data.message === 'Posted') {
-                alert('Se subio y mando a moderar correctamente!');
+                alert('¡Se subió y mandó a moderar correctamente!');
                 setModalDisplay('no-display');
                 captchaResponse.current.reset();
             } else if (
@@ -65,7 +65,7 @@ export default function ModalFile({
                 );
             } else if (res.data.message === 'Failed Captcha') {
                 alert(
-                    'Fallo en validarse el captcha. Si tocaste "subir resuelto" muchas veces puede haberlo rechazado por spam. Proba cerrar la pestaña y reintentar.',
+                    'Falló en validarse el captcha. Si tocaste "subir resuelto" muchas veces puede haberlo rechazado por spam. Probá cerrar la pestaña y reintentar.',
                 );
             }
 
@@ -117,7 +117,7 @@ export default function ModalFile({
                 Archivos pdf, jpg o png de hasta 4.5mb. En el nombre
                 cuatrimestre y año.
                 <br />
-                Si desaparece "Subiendo..." sin explicacion volver a intentar.{' '}
+                Si desaparece "Subiendo..." sin explicación volver a intentar.{' '}
                 <br />
                 <div className="upload-area">
                     <div id="captcha">

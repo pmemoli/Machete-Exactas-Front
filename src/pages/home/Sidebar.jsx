@@ -12,7 +12,7 @@ export default function Sidebar() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        Calendario academico
+                        Calendario académico
                     </a>
                 </li>
                 <li className="side-item">
@@ -21,7 +21,7 @@ export default function Sidebar() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        Menu universitario
+                        Menú universitario
                     </a>
                 </li>
                 <li className="side-item">
@@ -48,7 +48,7 @@ export default function Sidebar() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        Agenda fcen
+                        Agenda FCEN
                     </a>
                 </li>
                 <li className="side-item">

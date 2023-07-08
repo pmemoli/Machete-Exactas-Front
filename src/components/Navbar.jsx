@@ -15,7 +15,7 @@ export default function Navbar({ setOriginal }) {
                         className="page"
                         onClick={() => setOriginal(true)}
                     >
-                        Matematica
+                        Matemática
                     </Link>
                 </li>
                 <li>
@@ -24,7 +24,7 @@ export default function Navbar({ setOriginal }) {
                         className="page"
                         onClick={() => setOriginal(true)}
                     >
-                        Computacion
+                        Computación
                     </Link>
                 </li>
                 <li>
@@ -42,7 +42,7 @@ export default function Navbar({ setOriginal }) {
                         className="page"
                         onClick={() => setOriginal(true)}
                     >
-                        Fisica
+                        Física
                     </Link>
                 </li>
             </ul>
