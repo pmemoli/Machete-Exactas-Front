@@ -3,6 +3,10 @@ import Resueltos from './Resueltos.js'
 import Modal from './Modal.js'
 import '../assets/styles/materia.scss'
 
+function removerAcentos(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
 export default function Materia({nombre, resueltos, cargado}) {
   const [modalDisplay, setModalDisplay] = useState('no-display')
   const [tipoRes, setTipoRes] = useState('')
@@ -14,7 +18,7 @@ export default function Materia({nombre, resueltos, cargado}) {
   if (nombre == 'Intr. a la Est. y Cs. de Datos') nombre = 'Estadística'
   if (nombre == 'Intr. a la Inv. Oper. y Opt.') nombre = 'Inv. Operativa'
  
-  const nombreMateria = nombre.replaceAll(' ', '_').toLowerCase()
+  const nombreMateria = removerAcentos(nombre.replaceAll(' ', '_').toLowerCase())
   const yearRegex = /20\d\d/
 
   useEffect(() => {
