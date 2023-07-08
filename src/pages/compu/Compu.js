@@ -30,7 +30,7 @@ function Welcome({planEstudios, setPlanEstudios}) {
 }
 
 export default function Compu({resueltos, cargado}) {
-  const [planEstudios, setPlanEstudios] = useState('nuevo')
+  const [planEstudios, setPlanEstudios] = useState('viejo')
   const {materia} = useParams()
 
   const materiasViejo = [

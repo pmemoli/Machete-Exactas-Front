@@ -15,6 +15,7 @@ function Welcome() {
       Material para ambas orientaciones de la carrera de Ciencias Matemáticas.
       Acá está la <a href='https://cms.dm.uba.ar/academico/materias/' target='_blank'>página de la carrera</a> y 
       un <a href='https://visualizador-encuestas.exactas.uba.ar/index.html' target='_blank'>visualizador de encuestas</a>.
+      Muchas materias se dan en el <a href='https://ic.fcen.uba.ar/actividades-academicas/formacion/materias' target='_blank'>instituto de calculo</a>.
       </p>
       
       <div className='planes'>
