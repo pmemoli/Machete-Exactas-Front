@@ -2,27 +2,7 @@ import { MarkerType } from 'reactflow';
 const position = { x: 0, y: 0 };
 const markerEnd = { type: MarkerType.Arrow };
 
-export const materiasViejo = [
-    'Análisis 2 (C)',
-    'Álgebra 1',
-    'Probabilidad y Estadística (C)',
-    'Algoritmos 1',
-    'Métodos Numericos',
-    'Organización del Comp. 1',
-    'Algoritmos 2',
-    'Organización del Comp. 2',
-    'Algoritmos 3',
-    'Lógica y Computabilidad',
-    'Sistemas Operativos',
-    'Ingeniería 1',
-    'Paradigmas de Prog.',
-    'Teoría de Lenguajes',
-    'Teoría de las Com.',
-    'Base de Datos',
-    'Ingeniería 2',
-];
-
-export const nodesViejo = [
+export const nodes = [
     {
         id: 'cbc',
         type: 'course',
@@ -205,7 +185,7 @@ export const nodesViejo = [
     },
 ];
 
-export const edgesViejo = [
+export const edges = [
     {
         id: 'cbc-analisis',
         source: 'cbc',

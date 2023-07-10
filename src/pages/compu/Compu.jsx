@@ -4,9 +4,8 @@ import '../../assets/styles/compu.scss';
 import Sidebar from '../../components/layout/Sidebar';
 import Materia from '../../components/Materia';
 import { useParams } from 'react-router-dom';
-import { materiasViejo } from './data_viejo';
-import { materiasNuevo } from './data_nuevo';
-import { nodes, edges } from './data_viejo';
+import { materiasViejo, nodesViejo, edgesViejo } from './data_viejo';
+import { materiasNuevo, nodesNuevo, edgesNuevo } from './data_nuevo';
 import Welcome from '../../components/Welcome';
 
 export default function Compu({ resueltos, cargado }) {
@@ -17,7 +16,10 @@ export default function Compu({ resueltos, cargado }) {
     return (
         <div id="compu" style={{ height: 'max-content' }}>
             {!materia ? (
-                <Welcome nodes={nodes} edges={edges}>
+                <Welcome
+                    nodes={planEstudios === 'nuevo' ? nodesNuevo : nodesViejo}
+                    edges={planEstudios === 'nuevo' ? edgesNuevo : edgesViejo}
+                >
                     <div id="header-compu">
                         <h1>Computación</h1>
                         <button onClick={() => setPlanEstudios(opuesto)}>
