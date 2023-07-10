@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../assets/styles/components.scss';
 import '../../assets/styles/datos.scss';
 import plan from '../../assets/images/plan-datos.png';
-import Sidebar from '../../components/Sidebar';
+import Sidebar from '../../components/layout/Sidebar';
 import Materia from '../../components/Materia';
 import { useParams } from 'react-router-dom';
 

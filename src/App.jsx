@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './assets/styles/app.scss';
-import Navbar from './components/Navbar';
+import Navbar from './components/layout/Navbar';
 import Home from './pages/home/Home';
 import Mate from './pages/mate/Mate';
 import Fisica from './pages/fisica/Fisica';
@@ -10,7 +10,7 @@ import Datos from './pages/datos/Datos';
 import Instrucciones from './pages/instrucciones/Instrucciones';
 import Fuentes from './pages/fuentes/Fuentes';
 import axios from 'axios';
-import Footer from './components/Footer';
+import Footer from './components/layout/Footer';
 
 // TODO: Cambiar esto a una variable de entorno o que dependa si es dev o prod
 // const backSource = 'https://www.machete-exactas.com/';

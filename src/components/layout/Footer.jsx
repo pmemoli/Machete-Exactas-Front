@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styles/components.scss';
+import '../../assets/styles/components.scss';
 
 export default function Footer() {
     return (
@@ -16,7 +16,7 @@ export default function Footer() {
                             >
                                 <img
                                     className="github-icon"
-                                    src={require('../assets/images/github-icon.png')}
+                                    src={require('../../assets/images/github-icon.png')}
                                 ></img>
                             </a>
 
@@ -28,7 +28,7 @@ export default function Footer() {
                             >
                                 <img
                                     className="mail-icon"
-                                    src={require('../assets/images/mail-icon.png')}
+                                    src={require('../../assets/images/mail-icon.png')}
                                 ></img>
                             </a>
                         </div>
@@ -36,7 +36,7 @@ export default function Footer() {
                         <img
                             className="plebe-icon"
                             title="plebe gang"
-                            src={require('../assets/images/plebe.png')}
+                            src={require('../../assets/images/plebe.png')}
                         ></img>
                     </div>
                 </div>
