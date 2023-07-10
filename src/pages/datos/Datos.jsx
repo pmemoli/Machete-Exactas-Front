@@ -1,40 +1,11 @@
 import React, { useState } from 'react';
 import '../../assets/styles/components.scss';
 import '../../assets/styles/datos.scss';
-import plan from '../../assets/images/plan-datos.png';
 import Sidebar from '../../components/layout/Sidebar';
 import Materia from '../../components/Materia';
 import { useParams } from 'react-router-dom';
-
-function Welcome() {
-    return (
-        <div className="content">
-            <h1>Datos</h1>
-            <p>
-                Material para la carrera de Ciencia de Datos. Acá está la{' '}
-                <a href="https://lcd.exactas.uba.ar/" target="_blank">
-                    página de la carrera
-                </a>{' '}
-                y un{' '}
-                <a
-                    href="https://visualizador-encuestas.exactas.uba.ar/index.html"
-                    target="_blank"
-                >
-                    visualizador de encuestas
-                </a>
-                . Muchas materias se dan tambien en el{' '}
-                <a
-                    href="https://ic.fcen.uba.ar/actividades-academicas/formacion/materias"
-                    target="_blank"
-                >
-                    instituto de calculo
-                </a>
-                .
-            </p>
-            <img src={plan} />
-        </div>
-    );
-}
+import Welcome from '../../components/Welcome';
+import { nodes, edges } from './data';
 
 export default function Datos({ resueltos, cargado }) {
     const { materia } = useParams();
@@ -56,7 +27,34 @@ export default function Datos({ resueltos, cargado }) {
     ];
 
     function renderContent() {
-        if (materia === undefined) return <Welcome />;
+        if (materia === undefined)
+            return (
+                <Welcome nodes={nodes} edges={edges}>
+                    <h1>Datos</h1>
+                    <p>
+                        Material para la carrera de Ciencia de Datos. Acá está
+                        la{' '}
+                        <a href="https://lcd.exactas.uba.ar/" target="_blank">
+                            página de la carrera
+                        </a>{' '}
+                        y un{' '}
+                        <a
+                            href="https://visualizador-encuestas.exactas.uba.ar/index.html"
+                            target="_blank"
+                        >
+                            visualizador de encuestas
+                        </a>
+                        . Muchas materias se dan tambien en el{' '}
+                        <a
+                            href="https://ic.fcen.uba.ar/actividades-academicas/formacion/materias"
+                            target="_blank"
+                        >
+                            instituto de calculo
+                        </a>
+                        .
+                    </p>
+                </Welcome>
+            );
         else
             return (
                 <Materia
