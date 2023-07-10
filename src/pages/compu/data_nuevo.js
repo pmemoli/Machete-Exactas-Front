@@ -1,0 +1,363 @@
+import { Edge, MarkerType, Node } from 'reactflow';
+const position = { x: 0, y: 0 };
+const type = 'bezier';
+const markerEnd = { type: MarkerType.Arrow };
+
+export const materiasNuevo = [
+    'Intro. a la Programación',
+    'Álgebra 1',
+    'Algoritmos y Estructuras de Datos',
+    'Análisis 1',
+    'Paradigmas de Prog. (N)',
+    'Técnicas de Diseño de Algoritmos',
+    'Sistemas Digitales',
+    'Lenguajes Formales',
+    'Arquitectura y Organización',
+    'Álgebra Lineal Comp. (C)',
+    'Complejidad Computacional',
+    'Sistemas Operativos (N)',
+    'Estadística Computacional',
+    'Almacenamiento y recuperación de información',
+    'Programación Concurrente y Paralela',
+    'Redes de Comunicaciones',
+];
+
+export const nodes = [
+    {
+        id: 'cbc',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#D9B600',
+            label: 'CBC',
+        },
+        position,
+    },
+    {
+        id: 'analisis',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#c0de96',
+            label: 'Análisis II (C)',
+        },
+        position,
+    },
+    {
+        id: 'algebra',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#c0de96',
+            label: 'Álgebra I',
+        },
+        position,
+    },
+    {
+        id: 'proba',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#c0de96',
+            label: 'Probabilidad y Estadística (C)',
+        },
+        position,
+    },
+    {
+        id: 'algo1',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#7fc8f2',
+            label: 'Algorítmos y Estructuras de Datos I',
+        },
+        position,
+    },
+    {
+        id: 'algo2',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#7fc8f2',
+            label: 'Algorítmos y Estructuras de Datos II',
+        },
+        position,
+    },
+    {
+        id: 'algo3',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#7fc8f2',
+            label: 'Algorítmos y Estructuras de Datos III',
+        },
+        position,
+    },
+    {
+        id: 'metodos',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#7fc8f2',
+            label: 'Métodos Numéricos',
+        },
+        position,
+    },
+    {
+        id: 'orga1',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#e9a59d',
+            label: 'Organización del Computador I',
+        },
+        position,
+    },
+    {
+        id: 'orga2',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#e9a59d',
+            label: 'Organización del Computador II',
+        },
+        position,
+    },
+    {
+        id: 'sistemas',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#e9a59d',
+            label: 'Sistemas Operativos',
+        },
+        position,
+    },
+    {
+        id: 'bd',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#e9a59d',
+            label: 'Base de Datos',
+        },
+        position,
+    },
+    {
+        id: 'redes',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#e9a59d',
+            label: 'Teoría de las Comunicaciones',
+        },
+        position,
+    },
+    {
+        id: 'logica',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#d2a5e3',
+            label: 'Lógica y Computabilidad',
+        },
+        position,
+    },
+    {
+        id: 'inge1',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#d2a5e3',
+            label: 'Ingeniería de Software I',
+        },
+        position,
+    },
+    {
+        id: 'inge2',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#d2a5e3',
+            label: 'Ingeniería de Software II',
+        },
+        position,
+    },
+    {
+        id: 'plp',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#d2a5e3',
+            label: 'Paradigmas de Lenguajes de Programación',
+        },
+        position,
+    },
+    {
+        id: 'tleng',
+        type: 'course',
+        data: {
+            foreground: '#000',
+            background: '#d2a5e3',
+            label: 'Teoría de Lenguajes',
+        },
+        position,
+    },
+];
+
+export const edges = [
+    {
+        id: 'cbc-analisis',
+        source: 'cbc',
+        target: 'analisis',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'cbc-algebra',
+        source: 'cbc',
+        target: 'algebra',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'analisis-proba',
+        source: 'analisis',
+        target: 'proba',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'algebra-algo1',
+        source: 'algebra',
+        target: 'algo1',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'algo1-metodos',
+        source: 'algo1',
+        target: 'metodos',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'proba-metodos',
+        source: 'proba',
+        target: 'metodos',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'algo1-algo2',
+        source: 'algo1',
+        target: 'algo2',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'algo2-algo3',
+        source: 'algo2',
+        target: 'algo3',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'algo1-orga1',
+        source: 'algo1',
+        target: 'orga1',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'orga1-orga2',
+        source: 'orga1',
+        target: 'orga2',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'orga2-sistemas',
+        source: 'orga2',
+        target: 'sistemas',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'sistemas-redes',
+        source: 'sistemas',
+        target: 'redes',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'sistemas-bd',
+        source: 'sistemas',
+        target: 'bd',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'proba-redes',
+        source: 'proba',
+        target: 'redes',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'algo2-logica',
+        source: 'algo2',
+        target: 'logica',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'algo3-inge1',
+        source: 'algo3',
+        target: 'inge1',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'inge1-bd',
+        source: 'inge1',
+        target: 'bd',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'inge1-inge2',
+        source: 'inge1',
+        target: 'inge2',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'sistemas-inge2',
+        source: 'sistemas',
+        target: 'inge2',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'plp-inge2',
+        source: 'plp',
+        target: 'inge2',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'logica-plp',
+        source: 'logica',
+        target: 'plp',
+        markerEnd,
+        type,
+    },
+    {
+        id: 'logica-tleng',
+        source: 'logica',
+        target: 'tleng',
+        markerEnd,
+        type,
+    },
+];
