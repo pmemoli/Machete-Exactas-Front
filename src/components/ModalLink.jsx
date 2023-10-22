@@ -140,8 +140,7 @@ export default function ModalLink({
                         </select>
                     </label>
                 </div>
-                Se pueden subir links de drive, imgur o github. (Empezando con
-                https)
+                Los links pueden ser de drive, imgur, github, o pág. de la facultad.
                 <br />
                 Pasar en el nombre cuatrimestre y año del examen.
                 <br />
