@@ -30,6 +30,9 @@ export default function ModalLink({
     const linkRef = useRef();
     const tipoResueltoRef = useRef();
 
+    const materiasConTercParciales = ['inv._operativa', 'intr._al_modelado_continuo']
+    const nombreSeccionFinal = materiasConTercParciales.includes(nombreMateria) ? 'Terceros Parciales' : 'Finales'
+
     async function uploadLink() {
         try {
             setSubiendo(true);
@@ -126,7 +129,7 @@ export default function ModalLink({
                             <option value="segundos-parciales">
                                 Segundos Parciales
                             </option>
-                            <option value="finales">Finales</option>
+                            <option value="finales">{nombreSeccionFinal}</option>
                             <option value="guias-resueltas">
                                 Guias Resueltas
                             </option>
