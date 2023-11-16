@@ -141,9 +141,9 @@ export default function ModalLink({
                     </label>
                 </div>
                 Los links pueden ser de drive, imgur, github, o pags de la facultad.
-                <br />
+                <br/>
                 Pasar en el nombre cuatrimestre y año del examen.
-                <br />
+                <br/>
                 <a
                     className="instructions"
                     href="/instrucciones"

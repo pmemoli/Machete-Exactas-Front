@@ -26,24 +26,6 @@ export default function Sidebar() {
                 </li>
                 <li className="side-item">
                     <a
-                        href="https://exactas.uba.ar/higieneyseguridad/plan-de-proteccion/planos/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Planos de edificios
-                    </a>
-                </li>
-                <li className="side-item">
-                    <a
-                        href="https://exactas.uba.ar/wp-content/uploads/2022/10/0I-aulas-v2.pdf"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Mapa del 0+inf
-                    </a>
-                </li>
-                <li className="side-item">
-                    <a
                         href="https://exactas.uba.ar/agenda/"
                         target="_blank"
                         rel="noreferrer"
