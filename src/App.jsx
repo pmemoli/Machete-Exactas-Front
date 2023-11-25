@@ -15,7 +15,7 @@ import Footer from './components/Footer';
 // Todo este codigo es asqueroso fue mi primer projecto con react :skull: 
 // Cualquier limpieza es bienvenida
 
-// TODO: Cambiar esto a una variable de entorno o que dependa si es dev o prod
+// todo: Cambiar esto a una variable de entorno o que dependa si es dev o prod
 // const backSource = 'https://www.machete-exactas.com/';
 const backSource = '';
 
