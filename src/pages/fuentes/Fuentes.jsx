@@ -33,15 +33,6 @@ export default function Fuentes() {
                         Estufis-Física
                     </a>
                 </li>
-                <li>
-                    <a
-                        href="https://www.altillo.com/examenes/uba/cbc/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Altillo-CBC
-                    </a>
-                </li>
             </ul>
         </div>
     );

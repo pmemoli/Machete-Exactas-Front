@@ -14,7 +14,7 @@ export default function Home() {
                     la Facultad de Ciencias Exactas y Naturales en la UBA.
                     Cualquiera puede contribuir con material yendo a la página
                     de la materia. Muchos resueltos
-                    iniciales provienen de Cubawiki, Les Noetheries y Estufis
+                    provienen de Cubawiki, Les Noetheries y Estufis
                     (ver otras fuentes).
                 </p>
                 <img src={homeImg} />
