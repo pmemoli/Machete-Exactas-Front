@@ -7,7 +7,7 @@ import Sidebar from '../../components/Sidebar';
 import Materia from '../../components/Materia';
 import { useParams } from 'react-router-dom';
 
-function Welcome({ planEstudios, setPlanEstudios }) {
+function Welcome({planEstudios, setPlanEstudios}) {
     const opuesto = planEstudios === 'nuevo' ? 'viejo' : 'nuevo';
 
     return (
@@ -48,7 +48,7 @@ function Welcome({ planEstudios, setPlanEstudios }) {
 }
 
 export default function Compu({ resueltos, cargado }) {
-    const [planEstudios, setPlanEstudios] = useState('viejo');
+    const [planEstudios, setPlanEstudios] = useState('nuevo');
     const { materia } = useParams();
 
     const materiasViejo = [
