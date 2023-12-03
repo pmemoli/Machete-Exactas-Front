@@ -83,7 +83,7 @@ export default function Compu({ resueltos, cargado }) {
         'Arquitectura y Organización',
         'Álgebra Lineal Comp. (C)',
         'Complejidad Computacional',
-        'Sistemas Operativos (N)',
+        'Sistemas Operativos',
         'Estadística Computacional',
         'Almacenamiento y recuperación de información',
         'Programación Concurrente y Paralela',
