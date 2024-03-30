@@ -36,6 +36,16 @@ export default function Sidebar() {
                 <li className="side-item">
                     <Link to="/otras-fuentes">Otras fuentes</Link>
                 </li>
+
+                <li className="side-item">
+                    <a
+                        href="https://www.argendata.net/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        Datos Argentina
+                    </a>
+                </li>
             </ul>
         </div>
     );
