@@ -18,9 +18,6 @@ export default function Home() {
                     cierto tiempo. <b>Cualquier resuelto que tengas para subir ayuda muchísimo!</b>
                 </p>
                 <img src={homeImg} />
-                <div>
-                    El frontend es open source! Cualquiera lo puede modificar yendo al git abajo a la izquierda.
-                </div>
             </div>
             <Sidebar />
         </div>
