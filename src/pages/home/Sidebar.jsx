@@ -33,8 +33,15 @@ export default function Sidebar() {
                         Agenda FCEN
                     </a>
                 </li>
+
                 <li className="side-item">
-                    <Link to="/otras-fuentes">Otras fuentes</Link>
+                    <a
+                        href="https://exactas.uba.ar/wp-content/uploads/2022/10/0I-aulas-v2.pdf"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        Mapa del 0+inf
+                    </a>
                 </li>
 
                 <li className="side-item">
@@ -45,6 +52,11 @@ export default function Sidebar() {
                     >
                         Datos Argentina
                     </a>
+                </li>
+
+
+                <li className="side-item">
+                    <Link to="/otras-fuentes">Otras fuentes</Link>
                 </li>
             </ul>
         </div>

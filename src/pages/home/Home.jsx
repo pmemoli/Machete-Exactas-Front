@@ -14,10 +14,13 @@ export default function Home() {
                     la Facultad de Ciencias Exactas y Naturales en la UBA.
                     Cualquiera puede contribuir con material yendo a la página
                     de la materia. Muchos resueltos provienen
-                    de Cubawiki, Les Noetheries y Estufis (ver otras fuentes). Estos se suben automáticamente cada
-                    cierto tiempo.
+                    de Cubawiki, Les Noetheries y Estufis (ver otras fuentes) y se suben automáticamente cada
+                    cierto tiempo. <b>Cualquier resuelto que tengas para subir ayuda muchísimo!</b>
                 </p>
                 <img src={homeImg} />
+                <p>
+                    El frontend es open source! Cualquiera lo puede modificar yendo al git abajo a la izquierda.
+                </p>
             </div>
             <Sidebar />
         </div>
