@@ -20,6 +20,9 @@ export default function ModalFile({
     const fileRef = useRef();
     const tipoResueltoRef = useRef();
 
+    const materiasConTercParciales = ['inv._operativa', 'intr._al_modelado_continuo']
+    const nombreSeccionFinal = materiasConTercParciales.includes(nombreMateria) ? 'Terceros Parciales' : 'Finales'
+
     async function uploadFile() {
         try {
             if (file === 'None') {
@@ -108,7 +111,7 @@ export default function ModalFile({
                         <option value="segundos-parciales">
                             Segundos Parciales
                         </option>
-                        <option value="finales">Finales</option>
+                        <option value="finales">{nombreSeccionFinal}</option>
                         <option value="guias-resueltas">Guias Resueltas</option>
                         <option value="apuntes-clases">Apuntes y Clases</option>
                         <option value="complementos">Complementos</option>

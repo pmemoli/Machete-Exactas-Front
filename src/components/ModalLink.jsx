@@ -9,7 +9,7 @@ const axiosResueltos = axios.create({
 });
 
 function validateLink(link) {
-    const sources = ['imgur', 'drive.google.com', 'github', 'dm.uba', 'df.uba'];
+    const sources = ['campus.exactas', 'imgur', 'drive.google.com', 'github', 'dm.uba', 'df.uba'];
     const validSource = sources.some(
         (source) => link.includes(source) && link.includes('https://'),
     );
@@ -29,6 +29,9 @@ export default function ModalLink({
     const titleRef = useRef();
     const linkRef = useRef();
     const tipoResueltoRef = useRef();
+
+    const materiasConTercParciales = ['inv._operativa', 'intr._al_modelado_continuo']
+    const nombreSeccionFinal = materiasConTercParciales.includes(nombreMateria) ? 'Terceros Parciales' : 'Finales'
 
     async function uploadLink() {
         try {
@@ -54,7 +57,7 @@ export default function ModalLink({
                 )
             ) {
                 alert(
-                    'Link inválido. Tiene que empezar con https:// y ser de drive, github, imgur o paginas del dm o df.',
+                    'Link inválido. Tiene que empezar con https:// y ser de drive, github, imgur, páginas del dm, df o del campus.',
                 );
                 return;
             }
@@ -126,7 +129,7 @@ export default function ModalLink({
                             <option value="segundos-parciales">
                                 Segundos Parciales
                             </option>
-                            <option value="finales">Finales</option>
+                            <option value="finales">{nombreSeccionFinal}</option>
                             <option value="guias-resueltas">
                                 Guias Resueltas
                             </option>
@@ -137,11 +140,10 @@ export default function ModalLink({
                         </select>
                     </label>
                 </div>
-                Se pueden subir links de drive, imgur o github. (Empezando con
-                https)
-                <br />
+                Los links pueden ser de drive, imgur, github, o pags de la facultad.
+                <br/>
                 Pasar en el nombre cuatrimestre y año del examen.
-                <br />
+                <br/>
                 <a
                     className="instructions"
                     href="/instrucciones"

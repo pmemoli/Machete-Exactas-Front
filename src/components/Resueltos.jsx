@@ -1,4 +1,5 @@
 import React from 'react';
+
 // Convierte un resuelto en [anio, cuatri]
 function parseResuelto(resuelto) {
     const valores = [];
