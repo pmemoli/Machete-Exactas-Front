@@ -1,6 +1,7 @@
 import CareerMap from './CareerMap/CareerMap';
 import { ReactFlowProvider } from 'reactflow';
 import 'reactflow/dist/style.css';
+import '../assets/styles/welcome.scss';
 
 function Welcome({ children, nodes, edges }) {
     return (

@@ -22,13 +22,11 @@ const CareerMap = ({ initialNodes, initialEdges }) => {
     const [clickedCourse, setClickedCourse] = useState('');
 
     const [reactFlowInstance, setReactFlowInstance] = useState(null);
-    //const [fitView, setFitView] = useState((e) => {console.log(e)});
 
     const updateNodes = (id, reducedView) => {
         setPathview(reducedView);
         if (reducedView) {
             setNodes(initialNodes.filter((node) => path(id).includes(node.id)));
-            //setNodes(years.concat(filterNodesByID(id)));
         } else {
             setNodes(initialNodes);
         }
@@ -51,6 +49,7 @@ const CareerMap = ({ initialNodes, initialEdges }) => {
     };
 
     const reset = () => {
+        console.log('reset');
         updateNodes(null, false);
     };
 
@@ -59,16 +58,17 @@ const CareerMap = ({ initialNodes, initialEdges }) => {
             reactFlowInstance.fitView({
                 duration: 800,
                 padding: 0.1,
-                // center: true,
             });
         }
     }, [nodes, reactFlowInstance]);
 
     return (
-        <div style={{
-            height: '500px',
-            width: '100%',
-        }}>
+        <div
+            style={{
+                height: '700px',
+                width: '100%',
+            }}
+        >
             <ReactFlow
                 nodes={nodes}
                 edges={edges}
@@ -82,9 +82,7 @@ const CareerMap = ({ initialNodes, initialEdges }) => {
                 nodeTypes={nodeTypes}
                 onClick={(e) => {
                     // Esto es un hack horrible, habría que ver cómo hacerlo bien
-                    if (e.target.className === 'react-flow__pane') {
-                        reset();
-                    }
+                    if (e.target.className === 'react-flow__pane') reset();
                 }}
                 onNodeClick={nodeClick}
                 zoomOnScroll={false}
