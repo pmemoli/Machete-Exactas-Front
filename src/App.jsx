@@ -12,7 +12,10 @@ import Fuentes from './pages/fuentes/Fuentes';
 import axios from 'axios';
 import Footer from './components/layout/Footer';
 
-// TODO: Cambiar esto a una variable de entorno o que dependa si es dev o prod
+// Todo este codigo es asqueroso fue mi primer projecto con react :skull: 
+// Cualquier limpieza es bienvenida
+
+// todo: Cambiar esto a una variable de entorno o que dependa si es dev o prod
 // const backSource = 'https://www.machete-exactas.com/';
 const backSource = '';
 

@@ -26,13 +26,14 @@ export default function Sidebar() {
                 </li>
                 <li className="side-item">
                     <a
-                        href="https://exactas.uba.ar/higieneyseguridad/plan-de-proteccion/planos/"
+                        href="https://exactas.uba.ar/agenda/"
                         target="_blank"
                         rel="noreferrer"
                     >
-                        Planos de edificios
+                        Agenda FCEN
                     </a>
                 </li>
+
                 <li className="side-item">
                     <a
                         href="https://exactas.uba.ar/wp-content/uploads/2022/10/0I-aulas-v2.pdf"
@@ -42,15 +43,18 @@ export default function Sidebar() {
                         Mapa del 0+inf
                     </a>
                 </li>
+
                 <li className="side-item">
                     <a
-                        href="https://exactas.uba.ar/agenda/"
+                        href="https://www.argendata.net/"
                         target="_blank"
                         rel="noreferrer"
                     >
-                        Agenda FCEN
+                        Datos Argentina
                     </a>
                 </li>
+
+
                 <li className="side-item">
                     <Link to="/otras-fuentes">Otras fuentes</Link>
                 </li>
@@ -58,3 +62,4 @@ export default function Sidebar() {
         </div>
     );
 }
+

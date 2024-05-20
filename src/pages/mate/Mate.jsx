@@ -3,8 +3,8 @@ import '../../assets/styles/components.scss';
 import '../../assets/styles/mate.scss';
 import Sidebar from '../../components/layout/Sidebar';
 import Materia from '../../components/Materia';
-import planA from '../../assets/images/plan-aplicada-transp-3.png';
-import planP from '../../assets/images/plan-pura-transp.png';
+import planA from '../../assets/images/plan-aplicada.png';
+import planP from '../../assets/images/plan-pura.png';
 import { useParams } from 'react-router-dom';
 
 function Welcome() {

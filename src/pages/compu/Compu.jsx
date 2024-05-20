@@ -9,7 +9,7 @@ import { materiasNuevo, nodesNuevo, edgesNuevo } from './data_nuevo';
 import Welcome from '../../components/Welcome';
 
 export default function Compu({ resueltos, cargado }) {
-    const [planEstudios, setPlanEstudios] = useState('viejo');
+    const [planEstudios, setPlanEstudios] = useState('nuevo');
     const { materia } = useParams();
     const opuesto = planEstudios === 'nuevo' ? 'viejo' : 'nuevo';
 
