@@ -6,22 +6,17 @@ import useDAG from './useDAG';
 const nodeTypes = { course: CourseNode };
 
 const CareerMap = ({ initialNodes, initialEdges }) => {
-    const { buildDAG } = useDAG();
+    const {
+        nodes: layoutedNodes,
+        edges: layoutedEdges,
+        path,
+    } = useDAG({
+        initialNodes,
+        initialEdges,
+    });
 
-    const [nodes, setNodes, onNodesChange] = useNodesState([]);
-    const [edges, setEdges, onEdgesChange] = useEdgesState([]);
-    const [path, setPath] = useState(() => () => []);
-
-    const hardReset = () => {
-        const {
-            nodes: layoutedNodes,
-            edges: layoutedEdges,
-            path,
-        } = buildDAG(initialNodes, initialEdges);
-        setNodes(layoutedNodes);
-        setEdges(layoutedEdges);
-        setPath(path);
-    };
+    const [nodes, setNodes, onNodesChange] = useNodesState(layoutedNodes);
+    const [edges, setEdges, onEdgesChange] = useEdgesState(layoutedEdges);
 
     const [pathview, setPathview] = useState(true);
     const [clickedCourse, setClickedCourse] = useState('');
@@ -54,7 +49,6 @@ const CareerMap = ({ initialNodes, initialEdges }) => {
     };
 
     const reset = () => {
-        console.log('reset');
         updateNodes(null, false);
     };
 
@@ -66,10 +60,6 @@ const CareerMap = ({ initialNodes, initialEdges }) => {
             });
         }
     }, [nodes, reactFlowInstance]);
-
-    useEffect(() => {
-        hardReset();
-    }, [initialNodes, initialEdges]);
 
     return (
         <div

@@ -28,50 +28,43 @@ function backward_path(n, edges) {
     return nodes.filter((value, index, self) => self.indexOf(value) === index);
 }
 
-const useDAG = () => {
+const useDAG = ({ initialNodes, initialEdges }) => {
     const { getLayoutedElements } = useLayoutedElements();
 
-    const buildDAG = (initialNodes, initialEdges) => {
-        const lefts = [];
-        const rights = [];
-        const full_edges = [];
-        initialEdges.forEach((e) => {
-            full_edges.push([e.source, e.target]);
-            lefts.push(e.target);
-            rights.push(e.source);
-        });
+    const lefts = [];
+    const rights = [];
+    const full_edges = [];
+    initialEdges.forEach((e) => {
+        full_edges.push([e.source, e.target]);
+        lefts.push(e.target);
+        rights.push(e.source);
+    });
 
-        const ids = [];
-        initialNodes.forEach((n) => {
-            ids.push(n.id);
-            if (lefts.includes(n.id)) {
-                n.data.hasLeft = true;
-            }
-            if (rights.includes(n.id)) {
-                n.data.hasRight = true;
-            }
-        });
+    const ids = [];
+    initialNodes.forEach((n) => {
+        ids.push(n.id);
+        if (lefts.includes(n.id)) {
+            n.data.hasLeft = true;
+        }
+        if (rights.includes(n.id)) {
+            n.data.hasRight = true;
+        }
+    });
 
-        const { nodes, edges } = getLayoutedElements(
-            initialNodes,
-            initialEdges,
-        );
+    const { nodes, edges } = getLayoutedElements(initialNodes, initialEdges);
 
-        // Graph nodes before and after node n
-        const path = (n) => {
-            return forward_path(n, full_edges)
-                .concat(backward_path(n, full_edges))
-                .concat([n]);
-        };
-
-        return {
-            nodes,
-            edges,
-            path,
-        };
+    // Graph nodes before and after node n
+    const path = (n) => {
+        return forward_path(n, full_edges)
+            .concat(backward_path(n, full_edges))
+            .concat([n]);
     };
 
-    return { buildDAG };
+    return {
+        nodes,
+        edges,
+        path,
+    };
 };
 
 export default useDAG;
