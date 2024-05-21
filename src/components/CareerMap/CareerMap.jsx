@@ -18,7 +18,7 @@ const CareerMap = ({ initialNodes, initialEdges }) => {
     const [nodes, setNodes, onNodesChange] = useNodesState(layoutedNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(layoutedEdges);
 
-    const [pathview, setPathview] = useState(true);
+    const [_, setPathview] = useState(true);
     const [clickedCourse, setClickedCourse] = useState('');
 
     const [reactFlowInstance, setReactFlowInstance] = useState(null);
@@ -61,10 +61,14 @@ const CareerMap = ({ initialNodes, initialEdges }) => {
         }
     }, [nodes, reactFlowInstance]);
 
+    useEffect(() => {
+        reset();
+    }, [initialNodes, initialEdges]);
+
     return (
         <div
             style={{
-                height: '700px',
+                height: '1000px',
                 width: '100%',
             }}
         >

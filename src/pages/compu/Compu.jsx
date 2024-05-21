@@ -49,6 +49,8 @@ export default function Compu({ resueltos, cargado }) {
                         </a>{' '}
                         hay mucha información del nuevo plan.
                     </p>
+                    <br />
+                    <h2>Plan de estudios sugerido</h2>
                     <GraphMap
                         nodes={
                             planEstudios === 'nuevo' ? nodesNuevo : nodesViejo

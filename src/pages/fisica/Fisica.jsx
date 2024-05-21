@@ -61,6 +61,8 @@ export default function Fisica({ resueltos, cargado }) {
                         </a>
                         .
                     </p>
+                    <br />
+                    <h2>Plan de estudios sugerido</h2>
                     <GraphMap nodes={nodes} edges={edges} />
                 </Welcome>
             ) : (

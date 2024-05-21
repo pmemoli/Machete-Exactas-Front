@@ -1,6 +1,9 @@
 import { MarkerType } from 'reactflow';
 const position = { x: 0, y: 0 };
-const markerEnd = { type: MarkerType.Arrow };
+const style = {
+    strokeWidth: 2,
+    stroke: '#545350',
+};
 
 export const nodes = [
     {
@@ -160,109 +163,109 @@ export const edges = [
         id: 'cbc-algebra',
         source: 'cbc',
         target: 'algebra',
-        markerEnd,
+        style,
     },
     {
         id: 'cbc-analisis1',
         source: 'cbc',
         target: 'analisis1',
-        markerEnd,
+        style,
     },
     {
         id: 'cbc-electiva',
         source: 'cbc',
         target: 'electiva',
-        markerEnd,
+        style,
     },
     {
         id: 'analisis1-analisis2',
         source: 'analisis1',
         target: 'analisis2',
-        markerEnd,
+        style,
     },
     {
         id: 'algebra-alc',
         source: 'algebra',
         target: 'alc',
-        markerEnd,
+        style,
     },
     {
         id: 'algebra-algo1',
         source: 'algebra',
         target: 'algo1',
-        markerEnd,
+        style,
     },
     {
         id: 'algebra-avanzado',
         source: 'algebra',
         target: 'avanzado',
-        markerEnd,
+        style,
     },
     {
         id: 'algo1-algo2',
         source: 'algo1',
         target: 'algo2',
-        markerEnd,
+        style,
     },
     {
         id: 'algo1-labo',
         source: 'algo1',
         target: 'labo',
-        markerEnd,
+        style,
     },
     {
         id: 'algo2-algo3',
         source: 'algo2',
         target: 'algo3',
-        markerEnd,
+        style,
     },
     {
         id: 'algo2-estadistica',
         source: 'algo2',
         target: 'estadistica',
-        markerEnd,
+        style,
     },
     {
         id: 'algo3-IIOO',
         source: 'algo3',
         target: 'IIOO',
-        markerEnd,
+        style,
     },
     {
         id: 'analisis2-avanzado',
         source: 'analisis2',
         target: 'avanzado',
-        markerEnd,
+        style,
     },
     {
         id: 'analisis2-IIOO',
         source: 'analisis2',
         target: 'IIOO',
-        markerEnd,
+        style,
     },
-    { id: 'alc-IIOO', source: 'alc', target: 'IIOO', markerEnd },
+    { id: 'alc-IIOO', source: 'alc', target: 'IIOO', style },
     {
         id: 'alc-modelado',
         source: 'alc',
         target: 'modelado',
-        markerEnd,
+        style,
     },
     {
         id: 'avanzado-proba',
         source: 'avanzado',
         target: 'proba',
-        markerEnd,
+        style,
     },
     {
         id: 'avanzado-modelado',
         source: 'avanzado',
         target: 'modelado',
-        markerEnd,
+        style,
     },
     {
         id: 'proba-estadistica',
         source: 'proba',
         target: 'estadistica',
-        markerEnd,
+        style,
     },
 ];

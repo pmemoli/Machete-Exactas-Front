@@ -69,7 +69,11 @@ export default function Mate({ resueltos, cargado }) {
                         </a>
                         .
                     </p>
+                    <br />
+                    <h2>Plan de estudios sugerido (Matemática pura)</h2>
                     <GraphMap nodes={dataPura.nodes} edges={dataPura.edges} />
+                    <br />
+                    <h2>Plan de estudios sugerido (Matemática aplicada)</h2>
                     <GraphMap
                         nodes={dataAplicada.nodes}
                         edges={dataAplicada.edges}

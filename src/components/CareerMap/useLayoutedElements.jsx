@@ -12,7 +12,7 @@ const useLayoutedElements = () => {
         dagreGraph.setDefaultEdgeLabel(() => ({}));
 
         const isHorizontal = direction === 'LR';
-        dagreGraph.setGraph({ rankdir: direction, ranksep: 50, nodesep: 50 });
+        dagreGraph.setGraph({ rankdir: direction, ranksep: 100, nodesep: 50 });
 
         nodes.forEach((node) => {
             dagreGraph.setNode(node.id, {
