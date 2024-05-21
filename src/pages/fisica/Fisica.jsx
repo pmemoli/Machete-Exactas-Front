@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../../assets/styles/components.scss';
 import '../../assets/styles/fisica.scss';
-import plan from '../../assets/images/plan-fisica.png';
 import Sidebar from '../../components/layout/Sidebar';
 import Materia from '../../components/Materia';
 import { useParams } from 'react-router-dom';

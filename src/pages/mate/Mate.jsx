@@ -6,44 +6,8 @@ import Materia from '../../components/Materia';
 import planA from '../../assets/images/plan-aplicada.png';
 import planP from '../../assets/images/plan-pura.png';
 import { useParams } from 'react-router-dom';
-
-function Welcome() {
-    return (
-        <div className="content">
-            <h1>Matemática</h1>
-            <p>
-                Material para ambas orientaciones de la carrera de Ciencias
-                Matemáticas. Acá está la{' '}
-                <a
-                    href="https://cms.dm.uba.ar/academico/materias/"
-                    target="_blank"
-                >
-                    página de la carrera
-                </a>{' '}
-                y un{' '}
-                <a
-                    href="https://visualizador-encuestas.exactas.uba.ar/index.html"
-                    target="_blank"
-                >
-                    visualizador de encuestas
-                </a>
-                . Muchas materias se dan en el{' '}
-                <a
-                    href="https://ic.fcen.uba.ar/actividades-academicas/formacion/materias"
-                    target="_blank"
-                >
-                    instituto de calculo
-                </a>
-                .
-            </p>
-
-            <div className="planes">
-                <img src={planP} />
-                <img src={planA} />
-            </div>
-        </div>
-    );
-}
+import Welcome from '../../components/Welcome';
+import { nodes, edges } from './data';
 
 export default function Mate({ resueltos, cargado }) {
     const { materia } = useParams();
@@ -75,7 +39,42 @@ export default function Mate({ resueltos, cargado }) {
     ];
 
     function renderContent() {
-        if (materia === undefined) return <Welcome />;
+        if (materia === undefined)
+            return (
+                <Welcome nodes={nodes} edges={edges}>
+                    <h1>Matemática</h1>
+                    <p>
+                        Material para ambas orientaciones de la carrera de
+                        Ciencias Matemáticas. Acá está la{' '}
+                        <a
+                            href="https://cms.dm.uba.ar/academico/materias/"
+                            target="_blank"
+                        >
+                            página de la carrera
+                        </a>{' '}
+                        y un{' '}
+                        <a
+                            href="https://visualizador-encuestas.exactas.uba.ar/index.html"
+                            target="_blank"
+                        >
+                            visualizador de encuestas
+                        </a>
+                        . Muchas materias se dan en el{' '}
+                        <a
+                            href="https://ic.fcen.uba.ar/actividades-academicas/formacion/materias"
+                            target="_blank"
+                        >
+                            instituto de calculo
+                        </a>
+                        .
+                    </p>
+
+                    <div className="planes">
+                        <img src={planP} />
+                        <img src={planA} />
+                    </div>
+                </Welcome>
+            );
         else
             return (
                 <Materia
