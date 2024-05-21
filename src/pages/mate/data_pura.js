@@ -9,7 +9,7 @@ const markerEnd = { type: MarkerType.Arrow };
 // 'Optimización',
 // 'Análisis Numérico',
 
-export const nodes = [
+const nodes = [
     {
         id: 'cbc',
         type: 'course',
@@ -192,7 +192,7 @@ export const nodes = [
     },
 ];
 
-export const edges = [
+const edges = [
     {
         id: 'cbc-analisis1',
         source: 'cbc',
@@ -344,3 +344,5 @@ export const edges = [
         markerEnd,
     },
 ];
+
+export default { nodes, edges };

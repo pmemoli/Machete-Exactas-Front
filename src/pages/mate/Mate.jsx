@@ -7,7 +7,9 @@ import planA from '../../assets/images/plan-aplicada.png';
 import planP from '../../assets/images/plan-pura.png';
 import { useParams } from 'react-router-dom';
 import Welcome from '../../components/Welcome';
-import { nodes, edges } from './data';
+import dataPura from './data_pura';
+import dataAplicada from './data_aplicada';
+import { GraphMap } from '../../components/CareerMap/GraphMap';
 
 export default function Mate({ resueltos, cargado }) {
     const { materia } = useParams();
@@ -37,11 +39,10 @@ export default function Mate({ resueltos, cargado }) {
         'Optimización',
         'Análisis Numérico',
     ];
-
-    function renderContent() {
-        if (materia === undefined)
-            return (
-                <Welcome nodes={nodes} edges={edges}>
+    return (
+        <div id="mate">
+            {!materia ? (
+                <Welcome>
                     <h1>Matemática</h1>
                     <p>
                         Material para ambas orientaciones de la carrera de
@@ -68,26 +69,19 @@ export default function Mate({ resueltos, cargado }) {
                         </a>
                         .
                     </p>
-
-                    <div className="planes">
-                        <img src={planP} />
-                        <img src={planA} />
-                    </div>
+                    <GraphMap nodes={dataPura.nodes} edges={dataPura.edges} />
+                    <GraphMap
+                        nodes={dataAplicada.nodes}
+                        edges={dataAplicada.edges}
+                    />
                 </Welcome>
-            );
-        else
-            return (
+            ) : (
                 <Materia
                     nombre={materia}
                     resueltos={resueltos}
                     cargado={cargado}
                 />
-            );
-    }
-
-    return (
-        <div id="mate">
-            {renderContent()}
+            )}
             <Sidebar materias={materias} carrera="mate" />
         </div>
     );

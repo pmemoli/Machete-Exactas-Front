@@ -6,6 +6,7 @@ import Materia from '../../components/Materia';
 import { useParams } from 'react-router-dom';
 import { nodes, edges } from './data';
 import Welcome from '../../components/Welcome';
+import { GraphMap } from '../../components/CareerMap/GraphMap';
 
 export default function Fisica({ resueltos, cargado }) {
     const { materia } = useParams();
@@ -37,10 +38,10 @@ export default function Fisica({ resueltos, cargado }) {
         'Estructura 4',
     ];
 
-    function renderContent() {
-        if (materia === undefined)
-            return (
-                <Welcome nodes={nodes} edges={edges}>
+    return (
+        <div id="fisica">
+            {!materia ? (
+                <Welcome>
                     <h1>Física</h1>
                     <p>
                         Material para la carrera de Ciencias Físicas. Acá está
@@ -60,21 +61,15 @@ export default function Fisica({ resueltos, cargado }) {
                         </a>
                         .
                     </p>
+                    <GraphMap nodes={nodes} edges={edges} />
                 </Welcome>
-            );
-        else
-            return (
+            ) : (
                 <Materia
                     nombre={materia}
                     resueltos={resueltos}
                     cargado={cargado}
                 />
-            );
-    }
-
-    return (
-        <div id="fisica">
-            {renderContent()}
+            )}
             <Sidebar materias={materias} carrera="fisica" />
         </div>
     );

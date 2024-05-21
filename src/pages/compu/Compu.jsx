@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import { materiasViejo, nodesViejo, edgesViejo } from './data_viejo';
 import { materiasNuevo, nodesNuevo, edgesNuevo } from './data_nuevo';
 import Welcome from '../../components/Welcome';
+import { GraphMap } from '../../components/CareerMap/GraphMap';
 
 export default function Compu({ resueltos, cargado }) {
     const [planEstudios, setPlanEstudios] = useState('nuevo');
@@ -16,10 +17,7 @@ export default function Compu({ resueltos, cargado }) {
     return (
         <div id="compu" style={{ height: 'max-content' }}>
             {!materia ? (
-                <Welcome
-                    nodes={planEstudios === 'nuevo' ? nodesNuevo : nodesViejo}
-                    edges={planEstudios === 'nuevo' ? edgesNuevo : edgesViejo}
-                >
+                <Welcome>
                     <div id="header-compu">
                         <h1>Computación</h1>
                         <button onClick={() => setPlanEstudios(opuesto)}>
@@ -51,6 +49,14 @@ export default function Compu({ resueltos, cargado }) {
                         </a>{' '}
                         hay mucha información del nuevo plan.
                     </p>
+                    <GraphMap
+                        nodes={
+                            planEstudios === 'nuevo' ? nodesNuevo : nodesViejo
+                        }
+                        edges={
+                            planEstudios === 'nuevo' ? edgesNuevo : edgesViejo
+                        }
+                    />
                 </Welcome>
             ) : (
                 <Materia
