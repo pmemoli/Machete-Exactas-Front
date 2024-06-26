@@ -18,7 +18,7 @@ badd +1 ./
 badd +0 term://~/webdev/machete-exactas/front//18635:/bin/bash
 badd +2 src/components/Navbar.jsx
 badd +5 src/components/Sidebar.jsx
-badd +70 src/pages/home/Sidebar.jsx
+badd +69 src/pages/home/Sidebar.jsx
 badd +18 src/pages/home/Home.jsx
 badd +1 src/assets/styles/components.scss
 badd +40 src/components/Footer.jsx
@@ -71,7 +71,7 @@ set winwidth=1
 exe 'vert 1resize ' . ((&columns * 87 + 87) / 174)
 exe 'vert 2resize ' . ((&columns * 86 + 87) / 174)
 argglobal
-balt src/App.jsx
+balt src/pages/home/Home.jsx
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -82,11 +82,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 69 - ((33 * winheight(0) + 21) / 42)
+let s:l = 67 - ((29 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 69
+keepjumps 67
 normal! 0
 wincmd w
 argglobal
@@ -103,11 +103,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 34 - ((33 * winheight(0) + 21) / 42)
+let s:l = 68 - ((41 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 34
+keepjumps 68
 normal! 050|
 wincmd w
 2wincmd w
