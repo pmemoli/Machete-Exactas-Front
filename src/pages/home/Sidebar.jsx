@@ -15,15 +15,7 @@ export default function Sidebar() {
                         Calendario académico
                     </a>
                 </li>
-                <li className="side-item">
-                    <a
-                        href="https://calendar.google.com/calendar/u/0/embed?src=sn0ir2b77hr77k7f1it9q2u730@group.calendar.google.com&ctz=America/Argentina/Buenos_Aires&pli=1"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Menú universitario
-                    </a>
-                </li>
+
                 <li className="side-item">
                     <a
                         href="https://exactas.uba.ar/agenda/"
@@ -34,6 +26,15 @@ export default function Sidebar() {
                     </a>
                 </li>
 
+                <li className="side-item">
+                    <a
+                        href="https://calendar.google.com/calendar/u/0/embed?src=sn0ir2b77hr77k7f1it9q2u730@group.calendar.google.com&ctz=America/Argentina/Buenos_Aires&pli=1"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        Menú universitario
+                    </a>
+                </li>
                 <li className="side-item">
                     <a
                         href="https://exactas.uba.ar/wp-content/uploads/2022/10/0I-aulas-v2.pdf"
@@ -54,10 +55,20 @@ export default function Sidebar() {
                     </a>
                 </li>
 
+                <li className="side-item">
+                    <a
+                        href="https://github.com/pmemoli/Machete-Exactas-Front"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        Github de la página
+                    </a>
+                </li>
 
                 <li className="side-item">
                     <Link to="/otras-fuentes">Otras fuentes</Link>
                 </li>
+
             </ul>
         </div>
     );

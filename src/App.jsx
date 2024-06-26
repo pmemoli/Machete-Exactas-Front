@@ -9,11 +9,8 @@ import Compu from './pages/compu/Compu';
 import Datos from './pages/datos/Datos';
 import Instrucciones from './pages/instrucciones/Instrucciones';
 import Fuentes from './pages/fuentes/Fuentes';
-import axios from 'axios';
 import Footer from './components/Footer';
-
-// Todo este codigo es asqueroso fue mi primer projecto con react :skull: 
-// Cualquier limpieza es bienvenida
+import axios from 'axios';
 
 // todo: Cambiar esto a una variable de entorno o que dependa si es dev o prod
 // const backSource = 'https://www.machete-exactas.com/';
