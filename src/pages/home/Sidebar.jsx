@@ -54,7 +54,6 @@ export default function Sidebar() {
                         Datos Argentina
                     </a>
                 </li>
-
                 <li className="side-item">
                     <a
                         href="https://github.com/pmemoli/Machete-Exactas-Front"
@@ -64,11 +63,9 @@ export default function Sidebar() {
                         Github de la página
                     </a>
                 </li>
-
                 <li className="side-item">
                     <Link to="/otras-fuentes">Otras fuentes</Link>
                 </li>
-
             </ul>
         </div>
     );

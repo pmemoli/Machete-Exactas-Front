@@ -13,16 +13,17 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +112 src/App.jsx
+badd +49 src/App.jsx
 badd +1 ./
 badd +0 term://~/webdev/machete-exactas/front//18635:/bin/bash
 badd +2 src/components/Navbar.jsx
 badd +5 src/components/Sidebar.jsx
-badd +22 src/pages/home/Sidebar.jsx
+badd +70 src/pages/home/Sidebar.jsx
 badd +18 src/pages/home/Home.jsx
 badd +1 src/assets/styles/components.scss
 badd +40 src/components/Footer.jsx
 badd +0 term://~/webdev/machete-exactas/front//31521:/bin/bash
+badd +0 term://~/webdev/machete-exactas/front//31670:/bin/bash
 argglobal
 %argdel
 $argadd ./
@@ -50,10 +51,14 @@ normal! zt
 keepjumps 14
 normal! 0
 tabnext
-edit src/App.jsx
+edit src/pages/home/Sidebar.jsx
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
 wincmd t
@@ -63,7 +68,10 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
+exe 'vert 1resize ' . ((&columns * 87 + 87) / 174)
+exe 'vert 2resize ' . ((&columns * 86 + 87) / 174)
 argglobal
+balt src/App.jsx
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -74,12 +82,37 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 112 - ((39 * winheight(0) + 21) / 42)
+let s:l = 69 - ((33 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 112
+keepjumps 69
 normal! 0
+wincmd w
+argglobal
+if bufexists(fnamemodify("term://~/webdev/machete-exactas/front//31670:/bin/bash", ":p")) | buffer term://~/webdev/machete-exactas/front//31670:/bin/bash | else | edit term://~/webdev/machete-exactas/front//31670:/bin/bash | endif
+if &buftype ==# 'terminal'
+  silent file term://~/webdev/machete-exactas/front//31670:/bin/bash
+endif
+balt src/App.jsx
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 34 - ((33 * winheight(0) + 21) / 42)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 34
+normal! 050|
+wincmd w
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 87 + 87) / 174)
+exe 'vert 2resize ' . ((&columns * 86 + 87) / 174)
 tabnext 2
 set stal=1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
