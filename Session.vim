@@ -32,7 +32,7 @@ badd +70 src/components/CareerMap/CareerMap.jsx
 badd +73 src/pages/compu/Compu.jsx
 badd +33 src/components/Materia.jsx
 badd +1 src/components/Modal.jsx
-badd +16 src/components/GraficoPlan.jsx
+badd +19 src/components/GraficoPlan.jsx
 badd +4 src/components/CareerMap/GraphMap.jsx
 badd +253 src/pages/datos/data.js
 badd +9 src/pages/datos/Datos.jsx
@@ -51,6 +51,7 @@ badd +1 pnpm-lock.yaml
 badd +2 todo
 badd +1 netlify.toml
 badd +20 src/assets/styles/datos.scss
+badd +31 term://~/webdev/machete-exactas/front//33722:/bin/bash
 argglobal
 %argdel
 $argadd ./
@@ -71,11 +72,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 34 - ((33 * winheight(0) + 21) / 42)
+let s:l = 7987 - ((42 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 34
+keepjumps 7987
 normal! 0
 tabnext
 edit src/components/GraficoPlan.jsx
@@ -92,7 +93,6 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt src/assets/styles/graficoplan.scss
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -103,12 +103,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 16 - ((15 * winheight(0) + 21) / 42)
+let s:l = 19 - ((18 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 16
-normal! 080|
+keepjumps 19
+normal! 011|
 tabnext 2
 set stal=1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'

@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom';
 import {GraphMap} from './CareerMap/GraphMap'
 import '../assets/styles/graficoplan.scss';
 
 export function GraficoPlan({ picture, nodes, edges, subtitle=''}) {
 const startsMobile = window.innerWidth < 720
+const location = useLocation()
 
 const [mostrarFoto, setMostrarFoto] = useState(startsMobile)
 const [isMobile, setIsMobile] = useState(startsMobile)
@@ -13,7 +15,8 @@ const handleResize = () => {
   else setIsMobile(false)
 }
 
-useEffect(() => window.addEventListener("resize", handleResize), [picture, nodes])
+useEffect(() => window.addEventListener("resize", handleResize), [])
+useEffect(handleResize, [location])
 
 return (
     <div id='grafico-plan'>
