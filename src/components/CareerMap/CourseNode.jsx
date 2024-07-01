@@ -15,6 +15,7 @@ const CourseNode = ({ data }) => {
                 <Handle type="target" position={Position.Top} />
             ) : null}
             <div
+	        className='nowheel'
                 style={{
                     width: '200px',
                     minHeight: '50px',

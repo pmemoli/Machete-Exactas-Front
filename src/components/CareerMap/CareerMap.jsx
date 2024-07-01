@@ -67,6 +67,7 @@ const CareerMap = ({ initialNodes, initialEdges }) => {
 
     return (
         <div
+	    className='nowheel'
             style={{
                 height: '900px',
                 width: '100%',
