@@ -4,6 +4,7 @@ import '../assets/styles/graficoplan.scss';
 
 export function GraficoPlan({ picture, nodes, edges, subtitle=''}) {
 const startsMobile = window.innerWidth < 720
+
 const [mostrarFoto, setMostrarFoto] = useState(startsMobile)
 const [isMobile, setIsMobile] = useState(startsMobile)
 
@@ -12,7 +13,7 @@ const handleResize = () => {
   else setIsMobile(false)
 }
 
-useEffect(() => window.addEventListener("resize", handleResize), [])
+useEffect(() => window.addEventListener("resize", handleResize), [picture, nodes])
 
 return (
     <div id='grafico-plan'>

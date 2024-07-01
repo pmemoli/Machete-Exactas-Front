@@ -32,7 +32,7 @@ badd +70 src/components/CareerMap/CareerMap.jsx
 badd +73 src/pages/compu/Compu.jsx
 badd +33 src/components/Materia.jsx
 badd +1 src/components/Modal.jsx
-badd +18 src/components/GraficoPlan.jsx
+badd +16 src/components/GraficoPlan.jsx
 badd +4 src/components/CareerMap/GraphMap.jsx
 badd +253 src/pages/datos/data.js
 badd +9 src/pages/datos/Datos.jsx
@@ -42,7 +42,7 @@ badd +1 src/components/CareerMap/useDAG.jsx
 badd +1 src/components/CareerMap/CourseNode.jsx
 badd +42 src/assets/styles/compu.scss
 badd +19 src/assets/styles/graficoplan.scss
-badd +0 term://~/webdev/machete-exactas/front//28267:/bin/bash
+badd +90 term://~/webdev/machete-exactas/front//28267:/bin/bash
 badd +312 package-lock.json
 badd +154 Session.vim
 badd +25 .gitignore
@@ -78,14 +78,10 @@ normal! zt
 keepjumps 34
 normal! 0
 tabnext
-edit src/assets/styles/graficoplan.scss
+edit src/components/GraficoPlan.jsx
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
 wincmd t
@@ -95,10 +91,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 87 + 87) / 174)
-exe 'vert 2resize ' . ((&columns * 86 + 87) / 174)
 argglobal
-balt src/components/GraficoPlan.jsx
+balt src/assets/styles/graficoplan.scss
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -109,37 +103,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 19 - ((18 * winheight(0) + 21) / 42)
+let s:l = 16 - ((15 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 19
-normal! 017|
-wincmd w
-argglobal
-if bufexists(fnamemodify("term://~/webdev/machete-exactas/front//28267:/bin/bash", ":p")) | buffer term://~/webdev/machete-exactas/front//28267:/bin/bash | else | edit term://~/webdev/machete-exactas/front//28267:/bin/bash | endif
-if &buftype ==# 'terminal'
-  silent file term://~/webdev/machete-exactas/front//28267:/bin/bash
-endif
-balt src/pages/mate/Mate.jsx
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-let s:l = 62 - ((37 * winheight(0) + 21) / 42)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 62
-normal! 0
-wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 87 + 87) / 174)
-exe 'vert 2resize ' . ((&columns * 86 + 87) / 174)
+keepjumps 16
+normal! 080|
 tabnext 2
 set stal=1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
