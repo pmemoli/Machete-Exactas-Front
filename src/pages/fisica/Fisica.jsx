@@ -6,7 +6,8 @@ import Materia from '../../components/Materia';
 import { useParams } from 'react-router-dom';
 import { nodes, edges } from './data';
 import Welcome from '../../components/Welcome';
-import { GraphMap } from '../../components/CareerMap/GraphMap';
+import { GraficoPlan } from '../../components/GraficoPlan';
+import PlanFisica from '../../assets/images/plan-fisica.png'
 
 export default function Fisica({ resueltos, cargado }) {
     const { materia } = useParams();
@@ -62,8 +63,7 @@ export default function Fisica({ resueltos, cargado }) {
                         .
                     </p>
                     <br />
-                    <h2>Plan de estudios sugerido</h2>
-                    <GraphMap nodes={nodes} edges={edges} />
+                    <GraficoPlan picture={PlanFisica} nodes={nodes} edges={edges} />
                 </Welcome>
             ) : (
                 <Materia

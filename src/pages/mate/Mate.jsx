@@ -3,13 +3,13 @@ import '../../assets/styles/components.scss';
 import '../../assets/styles/mate.scss';
 import Sidebar from '../../components/layout/Sidebar';
 import Materia from '../../components/Materia';
-import planA from '../../assets/images/plan-aplicada.png';
-import planP from '../../assets/images/plan-pura.png';
+import PlanAplicada from '../../assets/images/plan-aplicada.png';
+import PlanPura from '../../assets/images/plan-pura.png';
 import { useParams } from 'react-router-dom';
 import Welcome from '../../components/Welcome';
 import dataPura from './data_pura';
 import dataAplicada from './data_aplicada';
-import { GraphMap } from '../../components/CareerMap/GraphMap';
+import { GraficoPlan } from '../../components/GraficoPlan';
 
 export default function Mate({ resueltos, cargado }) {
     const { materia } = useParams();
@@ -69,15 +69,24 @@ export default function Mate({ resueltos, cargado }) {
                         </a>
                         .
                     </p>
+
                     <br />
-                    <h2>Plan de estudios sugerido (Matemática pura)</h2>
-                    <GraphMap nodes={dataPura.nodes} edges={dataPura.edges} />
+
+                    <GraficoPlan
+		        picture={PlanPura}
+		        nodes={dataPura.nodes}
+  			edges={dataPura.edges}
+		    	subtitle='(pura)'
+		    />
+
                     <br />
-                    <h2>Plan de estudios sugerido (Matemática aplicada)</h2>
-                    <GraphMap
-                        nodes={dataAplicada.nodes}
-                        edges={dataAplicada.edges}
-                    />
+
+                    <GraficoPlan
+		        picture={PlanAplicada}
+		        nodes={dataAplicada.nodes}
+  			edges={dataAplicada.edges}
+		    	subtitle='(aplicada)'
+		    />
                 </Welcome>
             ) : (
                 <Materia

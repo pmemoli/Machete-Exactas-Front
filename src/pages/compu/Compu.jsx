@@ -7,7 +7,9 @@ import { useParams } from 'react-router-dom';
 import { materiasViejo, nodesViejo, edgesViejo } from './data_viejo';
 import { materiasNuevo, nodesNuevo, edgesNuevo } from './data_nuevo';
 import Welcome from '../../components/Welcome';
-import { GraphMap } from '../../components/CareerMap/GraphMap';
+import { GraficoPlan } from '../../components/GraficoPlan';
+import PlanViejo from '../../assets/images/plan-compu-viejo.png'
+import PlanNuevo from '../../assets/images/plan-compu-nuevo.png'
 
 export default function Compu({ resueltos, cargado }) {
     const [planEstudios, setPlanEstudios] = useState('nuevo');
@@ -50,8 +52,10 @@ export default function Compu({ resueltos, cargado }) {
                         hay mucha información del nuevo plan.
                     </p>
                     <br />
-                    <h2>Plan de estudios sugerido</h2>
-                    <GraphMap
+                    <GraficoPlan 
+		        picture={
+                            planEstudios === 'nuevo' ? PlanNuevo : PlanViejo 
+			} 
                         nodes={
                             planEstudios === 'nuevo' ? nodesNuevo : nodesViejo
                         }

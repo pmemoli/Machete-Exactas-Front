@@ -8,3 +8,4 @@ export function GraphMap({ nodes, edges }) {
         </ReactFlowProvider>
     );
 }
+

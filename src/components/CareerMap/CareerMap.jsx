@@ -68,7 +68,7 @@ const CareerMap = ({ initialNodes, initialEdges }) => {
     return (
         <div
             style={{
-                height: '1000px',
+                height: '900px',
                 width: '100%',
             }}
         >

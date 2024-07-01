@@ -1,0 +1,16 @@
+
+#header-grafico {
+    display: flex;
+    align-items: center;
+
+    button {
+        margin-left: 2rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        padding: 0.4rem;
+
+        @media (max-device-width: 660px) {
+            font-size: 1.6rem;
+        }
+    }
+}

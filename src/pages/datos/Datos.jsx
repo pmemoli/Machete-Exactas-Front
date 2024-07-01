@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import '../../assets/styles/components.scss';
 import '../../assets/styles/datos.scss';
 import Sidebar from '../../components/layout/Sidebar';
 import Materia from '../../components/Materia';
-import { useParams } from 'react-router-dom';
 import Welcome from '../../components/Welcome';
 import { nodes, edges } from './data';
-import { GraphMap } from '../../components/CareerMap/GraphMap';
+import { GraficoPlan } from '../../components/GraficoPlan';
+import PlanDatos from '../../assets/images/plan-datos.png'
 
 export default function Datos({ resueltos, cargado }) {
     const { materia } = useParams();
@@ -55,8 +56,8 @@ export default function Datos({ resueltos, cargado }) {
                         .
                     </p>
                     <br />
-                    <h2>Plan de estudios sugerido</h2>
-                    <GraphMap nodes={nodes} edges={edges} />
+
+                    <GraficoPlan picture={PlanDatos} nodes={nodes} edges={edges} />
                 </Welcome>
             ) : (
                 <Materia
