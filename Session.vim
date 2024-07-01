@@ -13,17 +13,44 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +49 src/App.jsx
+badd +16 src/App.jsx
 badd +1 ./
-badd +0 term://~/webdev/machete-exactas/front//18635:/bin/bash
+badd +1 term://~/webdev/machete-exactas/front//18635:/bin/bash
 badd +2 src/components/Navbar.jsx
 badd +5 src/components/Sidebar.jsx
-badd +70 src/pages/home/Sidebar.jsx
+badd +5 src/pages/home/Sidebar.jsx
 badd +18 src/pages/home/Home.jsx
-badd +1 src/assets/styles/components.scss
+badd +2 src/assets/styles/components.scss
 badd +40 src/components/Footer.jsx
-badd +0 term://~/webdev/machete-exactas/front//31521:/bin/bash
-badd +0 term://~/webdev/machete-exactas/front//31670:/bin/bash
+badd +1 term://~/webdev/machete-exactas/front//31521:/bin/bash
+badd +42 term://~/webdev/machete-exactas/front//31670:/bin/bash
+badd +1 src/pages/fisica/data.js
+badd +66 src/pages/fisica/Fisica.jsx
+badd +1 src/components/Welcome.jsx
+badd +4 src/pages/mate/Mate.jsx
+badd +70 src/components/CareerMap/CareerMap.jsx
+badd +73 src/pages/compu/Compu.jsx
+badd +33 src/components/Materia.jsx
+badd +1 src/components/Modal.jsx
+badd +18 src/components/GraficoPlan.jsx
+badd +4 src/components/CareerMap/GraphMap.jsx
+badd +253 src/pages/datos/data.js
+badd +9 src/pages/datos/Datos.jsx
+badd +1 src/assets/styles/home.scss
+badd +81 ~/.config/nvim/init.lua
+badd +1 src/components/CareerMap/useDAG.jsx
+badd +1 src/components/CareerMap/CourseNode.jsx
+badd +42 src/assets/styles/compu.scss
+badd +19 src/assets/styles/graficoplan.scss
+badd +0 term://~/webdev/machete-exactas/front//28267:/bin/bash
+badd +312 package-lock.json
+badd +154 Session.vim
+badd +25 .gitignore
+badd +1 package.json
+badd +1 pnpm-lock.yaml
+badd +2 todo
+badd +1 netlify.toml
+badd +20 src/assets/styles/datos.scss
 argglobal
 %argdel
 $argadd ./
@@ -44,14 +71,14 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 14 - ((13 * winheight(0) + 21) / 43)
+let s:l = 34 - ((33 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 14
+keepjumps 34
 normal! 0
 tabnext
-edit src/pages/home/Sidebar.jsx
+edit src/assets/styles/graficoplan.scss
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -71,7 +98,7 @@ set winwidth=1
 exe 'vert 1resize ' . ((&columns * 87 + 87) / 174)
 exe 'vert 2resize ' . ((&columns * 86 + 87) / 174)
 argglobal
-balt src/App.jsx
+balt src/components/GraficoPlan.jsx
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -82,19 +109,19 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 69 - ((33 * winheight(0) + 21) / 42)
+let s:l = 19 - ((18 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 69
-normal! 0
+keepjumps 19
+normal! 017|
 wincmd w
 argglobal
-if bufexists(fnamemodify("term://~/webdev/machete-exactas/front//31670:/bin/bash", ":p")) | buffer term://~/webdev/machete-exactas/front//31670:/bin/bash | else | edit term://~/webdev/machete-exactas/front//31670:/bin/bash | endif
+if bufexists(fnamemodify("term://~/webdev/machete-exactas/front//28267:/bin/bash", ":p")) | buffer term://~/webdev/machete-exactas/front//28267:/bin/bash | else | edit term://~/webdev/machete-exactas/front//28267:/bin/bash | endif
 if &buftype ==# 'terminal'
-  silent file term://~/webdev/machete-exactas/front//31670:/bin/bash
+  silent file term://~/webdev/machete-exactas/front//28267:/bin/bash
 endif
-balt src/App.jsx
+balt src/pages/mate/Mate.jsx
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -102,13 +129,13 @@ setlocal fdi=#
 setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
-setlocal fen
-let s:l = 34 - ((33 * winheight(0) + 21) / 42)
+setlocal nofen
+let s:l = 62 - ((37 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 34
-normal! 050|
+keepjumps 62
+normal! 0
 wincmd w
 2wincmd w
 exe 'vert 1resize ' . ((&columns * 87 + 87) / 174)
@@ -129,7 +156,6 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
 let g:this_session = v:this_session
 let g:this_obsession = v:this_session
 doautoall SessionLoadPost
