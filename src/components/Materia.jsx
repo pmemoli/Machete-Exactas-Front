@@ -19,8 +19,13 @@ export default function Materia({ nombre, resueltos, cargado }) {
     if (nombre == 'Intr. a la Est. y Cs. de Datos') nombre = 'Estadística';
     if (nombre == 'Intr. a la Inv. Oper. y Opt.') nombre = 'Inv. Operativa';
 
-    const materiasConTercParciales = ['Inv. Operativa', 'Intr. al Modelado Contínuo']
-    const nombreSeccionFinal = materiasConTercParciales.includes(nombre) ? 'Terceros Parciales' : 'Finales'
+    const materiasConTercParciales = [
+        'Inv. Operativa',
+        'Intr. al Modelado Contínuo',
+    ];
+    const nombreSeccionFinal = materiasConTercParciales.includes(nombre)
+        ? 'Terceros Parciales'
+        : 'Finales';
 
     const nombreMateria = removerAcentos(
         nombre.replaceAll(' ', '_').toLowerCase(),

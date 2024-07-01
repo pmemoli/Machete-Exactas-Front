@@ -1,49 +1,15 @@
 import React from 'react';
 import '../../assets/styles/components.scss';
 import '../../assets/styles/mate.scss';
-import Sidebar from '../../components/Sidebar';
+import Sidebar from '../../components/layout/Sidebar';
 import Materia from '../../components/Materia';
-import planA from '../../assets/images/plan-aplicada.png';
-import planP from '../../assets/images/plan-pura.png';
+import PlanAplicada from '../../assets/images/plan-aplicada.png';
+import PlanPura from '../../assets/images/plan-pura.png';
 import { useParams } from 'react-router-dom';
-
-function Welcome() {
-    return (
-        <div className="content">
-            <h1>Matemática</h1>
-            <p>
-                Material para ambas orientaciones de la carrera de Ciencias
-                Matemáticas. Acá está la{' '}
-                <a
-                    href="https://cms.dm.uba.ar/academico/materias/"
-                    target="_blank"
-                >
-                    página de la carrera
-                </a>{' '}
-                y un{' '}
-                <a
-                    href="https://visualizador-encuestas.exactas.uba.ar/index.html"
-                    target="_blank"
-                >
-                    visualizador de encuestas
-                </a>
-                . Muchas materias se dan en el{' '}
-                <a
-                    href="https://ic.fcen.uba.ar/actividades-academicas/formacion/materias"
-                    target="_blank"
-                >
-                    instituto de calculo
-                </a>
-                .
-            </p>
-
-            <div className="planes">
-                <img src={planP} />
-                <img src={planA} />
-            </div>
-        </div>
-    );
-}
+import Welcome from '../../components/Welcome';
+import dataPura from './data_pura';
+import dataAplicada from './data_aplicada';
+import { GraficoPlan } from '../../components/GraficoPlan';
 
 export default function Mate({ resueltos, cargado }) {
     const { materia } = useParams();
@@ -73,22 +39,62 @@ export default function Mate({ resueltos, cargado }) {
         'Optimización',
         'Análisis Numérico',
     ];
+    return (
+        <div id="mate">
+            {!materia ? (
+                <Welcome>
+                    <h1>Matemática</h1>
+                    <p>
+                        Material para ambas orientaciones de la carrera de
+                        Ciencias Matemáticas. Acá está la{' '}
+                        <a
+                            href="https://cms.dm.uba.ar/academico/materias/"
+                            target="_blank"
+                        >
+                            página de la carrera
+                        </a>{' '}
+                        y un{' '}
+                        <a
+                            href="https://visualizador-encuestas.exactas.uba.ar/index.html"
+                            target="_blank"
+                        >
+                            visualizador de encuestas
+                        </a>
+                        . Muchas materias se dan en el{' '}
+                        <a
+                            href="https://ic.fcen.uba.ar/actividades-academicas/formacion/materias"
+                            target="_blank"
+                        >
+                            instituto de calculo
+                        </a>
+                        .
+                    </p>
 
-    function renderContent() {
-        if (materia === undefined) return <Welcome />;
-        else
-            return (
+                    <br />
+
+                    <GraficoPlan
+		        picture={PlanPura}
+		        nodes={dataPura.nodes}
+  			edges={dataPura.edges}
+		    	subtitle='(pura)'
+		    />
+
+                    <br />
+
+                    <GraficoPlan
+		        picture={PlanAplicada}
+		        nodes={dataAplicada.nodes}
+  			edges={dataAplicada.edges}
+		    	subtitle='(aplicada)'
+		    />
+                </Welcome>
+            ) : (
                 <Materia
                     nombre={materia}
                     resueltos={resueltos}
                     cargado={cargado}
                 />
-            );
-    }
-
-    return (
-        <div id="mate">
-            {renderContent()}
+            )}
             <Sidebar materias={materias} carrera="mate" />
         </div>
     );

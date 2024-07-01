@@ -1,36 +1,13 @@
 import React, { useState } from 'react';
 import '../../assets/styles/components.scss';
 import '../../assets/styles/fisica.scss';
-import plan from '../../assets/images/plan-fisica.png';
-import Sidebar from '../../components/Sidebar';
+import Sidebar from '../../components/layout/Sidebar';
 import Materia from '../../components/Materia';
 import { useParams } from 'react-router-dom';
-
-function Welcome() {
-    return (
-        <div className="content">
-            <h1>Física</h1>
-            <p>
-                Material para la carrera de Ciencias Físicas. Acá está la{' '}
-                <a
-                    href="https://www.df.uba.ar/es/docentes/paginas-de-materias"
-                    target="_blank"
-                >
-                    página de la carrera
-                </a>{' '}
-                y un{' '}
-                <a
-                    href="https://visualizador-encuestas.exactas.uba.ar/index.html"
-                    target="_blank"
-                >
-                    visualizador de encuestas
-                </a>
-                .
-            </p>
-            <img src={plan} />
-        </div>
-    );
-}
+import { nodes, edges } from './data';
+import Welcome from '../../components/Welcome';
+import { GraficoPlan } from '../../components/GraficoPlan';
+import PlanFisica from '../../assets/images/plan-fisica.png'
 
 export default function Fisica({ resueltos, cargado }) {
     const { materia } = useParams();
@@ -62,21 +39,39 @@ export default function Fisica({ resueltos, cargado }) {
         'Estructura 4',
     ];
 
-    function renderContent() {
-        if (materia === undefined) return <Welcome />;
-        else
-            return (
+    return (
+        <div id="fisica">
+            {!materia ? (
+                <Welcome>
+                    <h1>Física</h1>
+                    <p>
+                        Material para la carrera de Ciencias Físicas. Acá está
+                        la{' '}
+                        <a
+                            href="https://www.df.uba.ar/es/docentes/paginas-de-materias"
+                            target="_blank"
+                        >
+                            página de la carrera
+                        </a>{' '}
+                        y un{' '}
+                        <a
+                            href="https://visualizador-encuestas.exactas.uba.ar/index.html"
+                            target="_blank"
+                        >
+                            visualizador de encuestas
+                        </a>
+                        .
+                    </p>
+                    <br />
+                    <GraficoPlan picture={PlanFisica} nodes={nodes} edges={edges} />
+                </Welcome>
+            ) : (
                 <Materia
                     nombre={materia}
                     resueltos={resueltos}
                     cargado={cargado}
                 />
-            );
-    }
-
-    return (
-        <div id="fisica">
-            {renderContent()}
+            )}
             <Sidebar materias={materias} carrera="fisica" />
         </div>
     );
