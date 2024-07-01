@@ -32,7 +32,7 @@ badd +70 src/components/CareerMap/CareerMap.jsx
 badd +73 src/pages/compu/Compu.jsx
 badd +33 src/components/Materia.jsx
 badd +1 src/components/Modal.jsx
-badd +19 src/components/GraficoPlan.jsx
+badd +7 src/components/GraficoPlan.jsx
 badd +4 src/components/CareerMap/GraphMap.jsx
 badd +253 src/pages/datos/data.js
 badd +9 src/pages/datos/Datos.jsx
@@ -41,7 +41,7 @@ badd +81 ~/.config/nvim/init.lua
 badd +1 src/components/CareerMap/useDAG.jsx
 badd +1 src/components/CareerMap/CourseNode.jsx
 badd +42 src/assets/styles/compu.scss
-badd +19 src/assets/styles/graficoplan.scss
+badd +24 src/assets/styles/graficoplan.scss
 badd +90 term://~/webdev/machete-exactas/front//28267:/bin/bash
 badd +312 package-lock.json
 badd +154 Session.vim
@@ -72,11 +72,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 7987 - ((42 * winheight(0) + 21) / 43)
+let s:l = 9283 - ((42 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 7987
+keepjumps 9283
 normal! 0
 tabnext
 edit src/components/GraficoPlan.jsx
@@ -93,6 +93,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
+balt src/assets/styles/graficoplan.scss
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -103,12 +104,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 19 - ((18 * winheight(0) + 21) / 42)
+let s:l = 7 - ((6 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 19
-normal! 011|
+keepjumps 7
+normal! 040|
 tabnext 2
 set stal=1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'

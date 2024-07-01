@@ -4,14 +4,14 @@ import {GraphMap} from './CareerMap/GraphMap'
 import '../assets/styles/graficoplan.scss';
 
 export function GraficoPlan({ picture, nodes, edges, subtitle=''}) {
-const startsMobile = window.innerWidth < 720
+const startsMobile = window.screen.width < 720
 const location = useLocation()
 
 const [mostrarFoto, setMostrarFoto] = useState(startsMobile)
 const [isMobile, setIsMobile] = useState(startsMobile)
 
 const handleResize = () => {
-  if (window.innerWidth < 720) setIsMobile(true)
+  if (window.screen.width < 720) setIsMobile(true)
   else setIsMobile(false)
 }
 
