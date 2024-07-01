@@ -41,7 +41,7 @@ badd +81 ~/.config/nvim/init.lua
 badd +1 src/components/CareerMap/useDAG.jsx
 badd +1 src/components/CareerMap/CourseNode.jsx
 badd +42 src/assets/styles/compu.scss
-badd +24 src/assets/styles/graficoplan.scss
+badd +25 src/assets/styles/graficoplan.scss
 badd +90 term://~/webdev/machete-exactas/front//28267:/bin/bash
 badd +312 package-lock.json
 badd +154 Session.vim
@@ -52,6 +52,7 @@ badd +2 todo
 badd +1 netlify.toml
 badd +20 src/assets/styles/datos.scss
 badd +31 term://~/webdev/machete-exactas/front//33722:/bin/bash
+badd +0 term://~/webdev/machete-exactas/front//35215:/bin/bash
 argglobal
 %argdel
 $argadd ./
@@ -72,17 +73,21 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 9283 - ((42 * winheight(0) + 21) / 43)
+let s:l = 9931 - ((42 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 9283
+keepjumps 9931
 normal! 0
 tabnext
-edit src/components/GraficoPlan.jsx
+edit src/assets/styles/graficoplan.scss
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
 wincmd t
@@ -92,8 +97,10 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
+exe 'vert 1resize ' . ((&columns * 87 + 87) / 174)
+exe 'vert 2resize ' . ((&columns * 86 + 87) / 174)
 argglobal
-balt src/assets/styles/graficoplan.scss
+balt src/components/GraficoPlan.jsx
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -104,12 +111,37 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 7 - ((6 * winheight(0) + 21) / 42)
+let s:l = 25 - ((24 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 7
-normal! 040|
+keepjumps 25
+normal! 019|
+wincmd w
+argglobal
+if bufexists(fnamemodify("term://~/webdev/machete-exactas/front//35215:/bin/bash", ":p")) | buffer term://~/webdev/machete-exactas/front//35215:/bin/bash | else | edit term://~/webdev/machete-exactas/front//35215:/bin/bash | endif
+if &buftype ==# 'terminal'
+  silent file term://~/webdev/machete-exactas/front//35215:/bin/bash
+endif
+balt src/components/GraficoPlan.jsx
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 22 - ((21 * winheight(0) + 21) / 42)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 22
+normal! 050|
+wincmd w
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 87 + 87) / 174)
+exe 'vert 2resize ' . ((&columns * 86 + 87) / 174)
 tabnext 2
 set stal=1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
