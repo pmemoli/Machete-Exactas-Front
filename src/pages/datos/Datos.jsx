@@ -7,7 +7,7 @@ import Materia from '../../components/Materia';
 import Welcome from '../../components/Welcome';
 import { nodes, edges } from './data';
 import { GraficoPlan } from '../../components/GraficoPlan';
-import PlanDatos from '../../assets/images/plan-datos.png'
+import PlanDatos from '../../assets/images/plan-datos-moderno.png'
 
 export default function Datos({ resueltos, cargado }) {
     const { materia } = useParams();

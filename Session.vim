@@ -28,14 +28,14 @@ badd +1 src/pages/fisica/data.js
 badd +66 src/pages/fisica/Fisica.jsx
 badd +1 src/components/Welcome.jsx
 badd +4 src/pages/mate/Mate.jsx
-badd +100 src/components/CareerMap/CareerMap.jsx
+badd +16 src/components/CareerMap/CareerMap.jsx
 badd +73 src/pages/compu/Compu.jsx
 badd +33 src/components/Materia.jsx
 badd +1 src/components/Modal.jsx
 badd +7 src/components/GraficoPlan.jsx
 badd +4 src/components/CareerMap/GraphMap.jsx
 badd +253 src/pages/datos/data.js
-badd +9 src/pages/datos/Datos.jsx
+badd +10 src/pages/datos/Datos.jsx
 badd +1 src/assets/styles/home.scss
 badd +81 ~/.config/nvim/init.lua
 badd +1 src/components/CareerMap/useDAG.jsx
@@ -53,6 +53,7 @@ badd +1 netlify.toml
 badd +20 src/assets/styles/datos.scss
 badd +31 term://~/webdev/machete-exactas/front//33722:/bin/bash
 badd +76 term://~/webdev/machete-exactas/front//35215:/bin/bash
+badd +42 term://~/webdev/machete-exactas/front//36939:/bin/bash
 argglobal
 %argdel
 $argadd ./
@@ -73,14 +74,14 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 10042 - ((41 * winheight(0) + 21) / 42)
+let s:l = 6 - ((5 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 10042
+keepjumps 6
 normal! 0
 tabnext
-edit src/components/CareerMap/CareerMap.jsx
+edit src/pages/datos/Datos.jsx
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -94,7 +95,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt src/components/CareerMap/GraphMap.jsx
+balt src/components/CareerMap/CareerMap.jsx
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -105,12 +106,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 100 - ((38 * winheight(0) + 21) / 42)
+let s:l = 10 - ((9 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 100
-normal! 0
+keepjumps 10
+normal! 065|
 tabnext 2
 set stal=1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
