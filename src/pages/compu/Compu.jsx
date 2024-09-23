@@ -30,10 +30,10 @@ export default function Compu({ resueltos, cargado }) {
                         Material para la carrera de Ciencias de la Computación.
                         Acá está la{' '}
                         <a
-                            href="https://computacion.dc.uba.ar/"
+                            href="https://www.dc.uba.ar/cursada-de-grado/"
                             target="_blank"
                         >
-                            página de la carrera
+                            página oficial de materias
                         </a>{' '}
                         y un{' '}
                         <a
@@ -42,14 +42,7 @@ export default function Compu({ resueltos, cargado }) {
                         >
                             visualizador de encuestas
                         </a>
-                        . En{' '}
-                        <a
-                            href="https://docs.google.com/document/d/e/2PACX-1vSlD-djaJcnw45-41ugO5yGqNl5hA_dKOAikyRDAh5QzsrToBi2XWPzU1i0ldDAbNct0rx2AfhuBf19/pub"
-                            targe="_blank"
-                        >
-                            esta página
-                        </a>{' '}
-                        hay mucha información del nuevo plan.
+                        .  
                     </p>
                     <br />
                     <GraficoPlan 

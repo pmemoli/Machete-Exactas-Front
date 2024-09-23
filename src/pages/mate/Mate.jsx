@@ -44,14 +44,14 @@ export default function Mate({ resueltos, cargado }) {
             {!materia ? (
                 <Welcome>
                     <h1>Matemática</h1>
-                    <p>
+                    <p style={{textIndent: 0}}>
                         Material para ambas orientaciones de la carrera de
                         Ciencias Matemáticas. Acá está la{' '}
                         <a
                             href="https://cms.dm.uba.ar/academico/materias/"
                             target="_blank"
                         >
-                            página de la carrera
+                            página oficial de materias
                         </a>{' '}
                         y un{' '}
                         <a

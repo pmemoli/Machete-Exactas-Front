@@ -51,7 +51,7 @@ export default function Fisica({ resueltos, cargado }) {
                             href="https://www.df.uba.ar/es/docentes/paginas-de-materias"
                             target="_blank"
                         >
-                            página de la carrera
+                            página oficial de materias
                         </a>{' '}
                         y un{' '}
                         <a

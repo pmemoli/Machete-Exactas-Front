@@ -18,24 +18,24 @@ badd +1 ./
 badd +1 term://~/webdev/machete-exactas/front//18635:/bin/bash
 badd +2 src/components/Navbar.jsx
 badd +5 src/components/Sidebar.jsx
-badd +5 src/pages/home/Sidebar.jsx
+badd +2 src/pages/home/Sidebar.jsx
 badd +18 src/pages/home/Home.jsx
 badd +2 src/assets/styles/components.scss
 badd +40 src/components/Footer.jsx
 badd +1 term://~/webdev/machete-exactas/front//31521:/bin/bash
 badd +42 term://~/webdev/machete-exactas/front//31670:/bin/bash
 badd +1 src/pages/fisica/data.js
-badd +66 src/pages/fisica/Fisica.jsx
+badd +54 src/pages/fisica/Fisica.jsx
 badd +1 src/components/Welcome.jsx
-badd +4 src/pages/mate/Mate.jsx
+badd +50 src/pages/mate/Mate.jsx
 badd +16 src/components/CareerMap/CareerMap.jsx
-badd +73 src/pages/compu/Compu.jsx
+badd +35 src/pages/compu/Compu.jsx
 badd +33 src/components/Materia.jsx
 badd +1 src/components/Modal.jsx
 badd +7 src/components/GraficoPlan.jsx
 badd +4 src/components/CareerMap/GraphMap.jsx
 badd +253 src/pages/datos/data.js
-badd +10 src/pages/datos/Datos.jsx
+badd +43 src/pages/datos/Datos.jsx
 badd +1 src/assets/styles/home.scss
 badd +81 ~/.config/nvim/init.lua
 badd +1 src/components/CareerMap/useDAG.jsx
@@ -54,6 +54,9 @@ badd +20 src/assets/styles/datos.scss
 badd +31 term://~/webdev/machete-exactas/front//33722:/bin/bash
 badd +76 term://~/webdev/machete-exactas/front//35215:/bin/bash
 badd +42 term://~/webdev/machete-exactas/front//36939:/bin/bash
+badd +22 term://~/webdev/machete-exactas/front//9883:/bin/bash
+badd +1 src/pages/mate/data_pura.js
+badd +0 term://~/webdev/machete-exactas/front//17941:/bin/bash
 argglobal
 %argdel
 $argadd ./
@@ -85,6 +88,10 @@ edit src/pages/datos/Datos.jsx
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
 wincmd t
@@ -94,8 +101,10 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
+exe 'vert 1resize ' . ((&columns * 87 + 87) / 174)
+exe 'vert 2resize ' . ((&columns * 86 + 87) / 174)
 argglobal
-balt src/components/CareerMap/CareerMap.jsx
+balt src/pages/fisica/Fisica.jsx
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -103,15 +112,40 @@ setlocal fdi=#
 setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
-setlocal fen
+setlocal nofen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 10 - ((9 * winheight(0) + 21) / 42)
+let s:l = 52 - ((28 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 10
-normal! 065|
+keepjumps 52
+normal! 050|
+wincmd w
+argglobal
+if bufexists(fnamemodify("term://~/webdev/machete-exactas/front//17941:/bin/bash", ":p")) | buffer term://~/webdev/machete-exactas/front//17941:/bin/bash | else | edit term://~/webdev/machete-exactas/front//17941:/bin/bash | endif
+if &buftype ==# 'terminal'
+  silent file term://~/webdev/machete-exactas/front//17941:/bin/bash
+endif
+balt src/pages/compu/Compu.jsx
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+let s:l = 1 - ((0 * winheight(0) + 21) / 42)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+wincmd w
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 87 + 87) / 174)
+exe 'vert 2resize ' . ((&columns * 86 + 87) / 174)
 tabnext 2
 set stal=1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'

@@ -36,8 +36,11 @@ export default function Datos({ resueltos, cargado }) {
                     <p>
                         Material para la carrera de Ciencia de Datos. Acá está
                         la{' '}
-                        <a href="https://lcd.exactas.uba.ar/" target="_blank">
-                            página de la carrera
+                        <a
+                            href="https://lcd.exactas.uba.ar/materias-obligatorias/"
+                            target="_blank"
+                        >
+                            página oficial de materias
                         </a>{' '}
                         y un{' '}
                         <a
@@ -46,7 +49,7 @@ export default function Datos({ resueltos, cargado }) {
                         >
                             visualizador de encuestas
                         </a>
-                        . Muchas materias se dan tambien en el{' '}
+                        . Muchas materias se dan en el{' '}
                         <a
                             href="https://ic.fcen.uba.ar/actividades-academicas/formacion/materias"
                             target="_blank"
