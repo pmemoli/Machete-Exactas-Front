@@ -44,7 +44,7 @@ export default function Mate({ resueltos, cargado }) {
             {!materia ? (
                 <Welcome>
                     <h1>Matemática</h1>
-                    <p style={{textIndent: 0}}>
+                    <p>
                         Material para ambas orientaciones de la carrera de
                         Ciencias Matemáticas. Acá está la{' '}
                         <a

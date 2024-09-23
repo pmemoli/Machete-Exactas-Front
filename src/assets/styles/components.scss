@@ -72,7 +72,7 @@ $font: 'Dosis', sans-serif;
     min-width: 18rem;
     margin-left: 1rem;
     font-family: $font;
-    font-size: 1.53rem;
+    font-size: 1.6rem;
     font-weight: 350;
     background-color: rgb(215, 213, 77);
     min-height: 130vh;
@@ -105,6 +105,25 @@ $font: 'Dosis', sans-serif;
         margin: auto;
         margin-top: 4vh;
         width: 80%
+    }
+}
+
+#mapas {
+    font-family: $font;
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-top: 0.6rem;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        margin: 4vh;
+        width: 90%
     }
 }
 

@@ -7,8 +7,9 @@ import Mate from './pages/mate/Mate';
 import Fisica from './pages/fisica/Fisica';
 import Compu from './pages/compu/Compu';
 import Datos from './pages/datos/Datos';
-import Instrucciones from './pages/instrucciones/Instrucciones';
-import Fuentes from './pages/fuentes/Fuentes';
+import Instrucciones from './pages/misc/Instrucciones';
+import Fuentes from './pages/misc/Fuentes';
+import Mapas from './pages/misc/Mapas';
 import axios from 'axios';
 import Footer from './components/layout/Footer';
 
@@ -51,6 +52,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/otras-fuentes" element={<Fuentes />} />
                     <Route path="/instrucciones" element={<Instrucciones />} />
+                    <Route path="/mapas" element={<Mapas />} />
 
                     <Route
                         path="/mate"

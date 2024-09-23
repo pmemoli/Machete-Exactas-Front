@@ -36,15 +36,8 @@ export default function Sidebar() {
                     </a>
                 </li>
                 <li className="side-item">
-                    <a
-                        href="https://exactas.uba.ar/wp-content/uploads/2022/10/0I-aulas-v2.pdf"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Mapa del 0+inf
-                    </a>
+                    <Link to="/mapas">Mapas del 0+inf</Link>
                 </li>
-
                 <li className="side-item">
                     <a
                         href="https://www.argendata.net/"
