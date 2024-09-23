@@ -62,7 +62,7 @@ export const nodes = [
         data: {
             foreground: '#000',
             background: '#7fc8f2',
-            label: 'Algoritmos y Estructuras de Datos II',
+            label: 'Algoritmos y Estructuras de Datos III',
         },
         position,
     },
