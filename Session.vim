@@ -66,8 +66,8 @@ badd +1 src/assets/images/cero1.jpg
 badd +23 src/assets/styles/mate.scss
 badd +10 src/assets/styles/welcome.scss
 badd +7 src/assets/styles/fisica.scss
-badd +58 src/assets/styles/materia.scss
-badd +0 src/components/Resueltos.jsx
+badd +50 src/assets/styles/materia.scss
+badd +1 src/components/Resueltos.jsx
 argglobal
 %argdel
 $argadd ./
@@ -105,19 +105,19 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 59 - ((16 * winheight(0) + 21) / 42)
+let s:l = 50 - ((7 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 59
-normal! 024|
+keepjumps 50
+normal! 020|
 wincmd w
 argglobal
-if bufexists(fnamemodify("src/components/Resueltos.jsx", ":p")) | buffer src/components/Resueltos.jsx | else | edit src/components/Resueltos.jsx | endif
+if bufexists(fnamemodify("src/components/Materia.jsx", ":p")) | buffer src/components/Materia.jsx | else | edit src/components/Materia.jsx | endif
 if &buftype ==# 'terminal'
-  silent file src/components/Resueltos.jsx
+  silent file src/components/Materia.jsx
 endif
-balt src/components/Materia.jsx
+balt src/components/Resueltos.jsx
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -128,12 +128,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 86 - ((1 * winheight(0) + 21) / 42)
+let s:l = 64 - ((21 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 86
-normal! 0
+keepjumps 64
+normal! 019|
 wincmd w
 2wincmd w
 exe 'vert 1resize ' . ((&columns * 84 + 87) / 174)
