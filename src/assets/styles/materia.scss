@@ -47,7 +47,7 @@ $font: 'Dosis', sans-serif;
 .item-resuelto {
     text-decoration: none;
     color: rgb(0, 0, 0);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 #resueltos {
@@ -55,8 +55,12 @@ $font: 'Dosis', sans-serif;
     flex-direction: column;
     gap: 1.8rem;
 
+    h1 {
+        font-size: 3rem;
+    }
+
     h2 {
-        font-size: 1.9rem;
+        font-size: 2.5rem;
     }
 }
 
