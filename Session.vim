@@ -30,7 +30,7 @@ badd +3 src/components/Welcome.jsx
 badd +47 src/pages/mate/Mate.jsx
 badd +16 src/components/CareerMap/CareerMap.jsx
 badd +35 src/pages/compu/Compu.jsx
-badd +44 src/components/Materia.jsx
+badd +63 src/components/Materia.jsx
 badd +1 src/components/Modal.jsx
 badd +7 src/components/GraficoPlan.jsx
 badd +4 src/components/CareerMap/GraphMap.jsx
@@ -66,7 +66,7 @@ badd +1 src/assets/images/cero1.jpg
 badd +23 src/assets/styles/mate.scss
 badd +10 src/assets/styles/welcome.scss
 badd +7 src/assets/styles/fisica.scss
-badd +50 src/assets/styles/materia.scss
+badd +54 src/assets/styles/materia.scss
 badd +1 src/components/Resueltos.jsx
 argglobal
 %argdel
@@ -91,8 +91,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 84 + 87) / 174)
-exe 'vert 2resize ' . ((&columns * 89 + 87) / 174)
+exe 'vert 1resize ' . ((&columns * 87 + 87) / 174)
+exe 'vert 2resize ' . ((&columns * 86 + 87) / 174)
 argglobal
 balt src/assets/styles/components.scss
 setlocal fdm=manual
@@ -105,19 +105,19 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 50 - ((7 * winheight(0) + 21) / 42)
+let s:l = 55 - ((12 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 50
-normal! 020|
+keepjumps 55
+normal! 018|
 wincmd w
 argglobal
 if bufexists(fnamemodify("src/components/Materia.jsx", ":p")) | buffer src/components/Materia.jsx | else | edit src/components/Materia.jsx | endif
 if &buftype ==# 'terminal'
   silent file src/components/Materia.jsx
 endif
-balt src/components/Resueltos.jsx
+balt src/assets/styles/materia.scss
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -128,16 +128,16 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 64 - ((21 * winheight(0) + 21) / 42)
+let s:l = 58 - ((15 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 64
-normal! 019|
+keepjumps 58
+normal! 021|
 wincmd w
 2wincmd w
-exe 'vert 1resize ' . ((&columns * 84 + 87) / 174)
-exe 'vert 2resize ' . ((&columns * 89 + 87) / 174)
+exe 'vert 1resize ' . ((&columns * 87 + 87) / 174)
+exe 'vert 2resize ' . ((&columns * 86 + 87) / 174)
 tabnext
 argglobal
 if bufexists(fnamemodify("term://~/webdev/machete-exactas/front//6990:/bin/bash", ":p")) | buffer term://~/webdev/machete-exactas/front//6990:/bin/bash | else | edit term://~/webdev/machete-exactas/front//6990:/bin/bash | endif
@@ -158,7 +158,7 @@ if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 6
-normal! 0
+normal! 050|
 tabnext 1
 set stal=1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'

@@ -54,13 +54,13 @@ export default function Materia({ nombre, resueltos, cargado }) {
 
     if (!cargado)
         return (
-            <div>
+            <div id="pagina-materia">
                 <h1>Cargando...</h1>
             </div>
         );
     else
         return (
-            <div>
+            <div id="pagina-materia">
                 <h1>{nombre}</h1>
 
                 <div id="resueltos">
