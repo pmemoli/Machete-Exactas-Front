@@ -27,10 +27,10 @@ badd +42 term://~/webdev/machete-exactas/front//31670:/bin/bash
 badd +1 src/pages/fisica/data.js
 badd +54 src/pages/fisica/Fisica.jsx
 badd +3 src/components/Welcome.jsx
-badd +47 src/pages/mate/Mate.jsx
+badd +40 src/pages/mate/Mate.jsx
 badd +16 src/components/CareerMap/CareerMap.jsx
 badd +35 src/pages/compu/Compu.jsx
-badd +63 src/components/Materia.jsx
+badd +64 src/components/Materia.jsx
 badd +1 src/components/Modal.jsx
 badd +7 src/components/GraficoPlan.jsx
 badd +4 src/components/CareerMap/GraphMap.jsx
@@ -40,7 +40,7 @@ badd +14 src/assets/styles/home.scss
 badd +81 ~/.config/nvim/init.lua
 badd +1 src/components/CareerMap/useDAG.jsx
 badd +13 src/components/CareerMap/CourseNode.jsx
-badd +25 src/assets/styles/compu.scss
+badd +1 src/assets/styles/compu.scss
 badd +3 src/assets/styles/graficoplan.scss
 badd +90 term://~/webdev/machete-exactas/front//28267:/bin/bash
 badd +312 package-lock.json
@@ -63,10 +63,10 @@ badd +1 term://~/webdev/machete-exactas/front//6990:/bin/bash
 badd +8 src/pages/misc/Mapas.jsx
 badd +1 src/assets/images/argendata.png
 badd +1 src/assets/images/cero1.jpg
-badd +23 src/assets/styles/mate.scss
+badd +3 src/assets/styles/mate.scss
 badd +10 src/assets/styles/welcome.scss
-badd +7 src/assets/styles/fisica.scss
-badd +54 src/assets/styles/materia.scss
+badd +1 src/assets/styles/fisica.scss
+badd +1 src/assets/styles/materia.scss
 badd +1 src/components/Resueltos.jsx
 argglobal
 %argdel
@@ -74,7 +74,7 @@ $argadd ./
 set stal=2
 tabnew +setlocal\ bufhidden=wipe
 tabrewind
-edit src/assets/styles/materia.scss
+edit src/components/Materia.jsx
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -91,32 +91,9 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 87 + 87) / 174)
-exe 'vert 2resize ' . ((&columns * 86 + 87) / 174)
+exe 'vert 1resize ' . ((&columns * 84 + 87) / 174)
+exe 'vert 2resize ' . ((&columns * 89 + 87) / 174)
 argglobal
-balt src/assets/styles/components.scss
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 55 - ((12 * winheight(0) + 21) / 42)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 55
-normal! 018|
-wincmd w
-argglobal
-if bufexists(fnamemodify("src/components/Materia.jsx", ":p")) | buffer src/components/Materia.jsx | else | edit src/components/Materia.jsx | endif
-if &buftype ==# 'terminal'
-  silent file src/components/Materia.jsx
-endif
 balt src/assets/styles/materia.scss
 setlocal fdm=manual
 setlocal fde=0
@@ -128,16 +105,39 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 58 - ((15 * winheight(0) + 21) / 42)
+let s:l = 64 - ((30 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 58
-normal! 021|
+keepjumps 64
+normal! 034|
+wincmd w
+argglobal
+if bufexists(fnamemodify("src/assets/styles/materia.scss", ":p")) | buffer src/assets/styles/materia.scss | else | edit src/assets/styles/materia.scss | endif
+if &buftype ==# 'terminal'
+  silent file src/assets/styles/materia.scss
+endif
+balt src/assets/styles/fisica.scss
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 53 - ((10 * winheight(0) + 21) / 42)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 53
+normal! 0
 wincmd w
 2wincmd w
-exe 'vert 1resize ' . ((&columns * 87 + 87) / 174)
-exe 'vert 2resize ' . ((&columns * 86 + 87) / 174)
+exe 'vert 1resize ' . ((&columns * 84 + 87) / 174)
+exe 'vert 2resize ' . ((&columns * 89 + 87) / 174)
 tabnext
 argglobal
 if bufexists(fnamemodify("term://~/webdev/machete-exactas/front//6990:/bin/bash", ":p")) | buffer term://~/webdev/machete-exactas/front//6990:/bin/bash | else | edit term://~/webdev/machete-exactas/front//6990:/bin/bash | endif
