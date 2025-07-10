@@ -9,10 +9,23 @@ const axiosResueltos = axios.create({
 });
 
 function validateLink(link) {
-    const sources = ['campus.exactas', 'imgur', 'drive.google.com', 'github', 'dm.uba', 'df.uba'];
-    const validSource = sources.some(
-        (source) => link.includes(source) && link.includes('https://'),
-    );
+    const validDomains = [
+        'campus12-24.exactas.uba.ar',
+        'campus.exactas.uba.ar',
+        'imgur.com',
+        'drive.google.com',
+        'github.com',
+        'gitlab.com',
+        'git.exactas.uba.ar',
+        'dm.uba.ar',
+        'df.uba.ar'
+    ];
+    
+    const createDomainPattern = (domain) => 
+        new RegExp(`^https:\\/\\/([a-zA-Z0-9-]+\\.)*${domain.replace(/\./g, '\\.')}`, 'i');
+    
+    const validDomainPatterns = validDomains.map(createDomainPattern);
+    const validSource = validDomainPatterns.some(pattern => pattern.test(link));
     const properLength = link.length < 340;
 
     return validSource && properLength;
@@ -57,7 +70,7 @@ export default function ModalLink({
                 )
             ) {
                 alert(
-                    'Link inválido. Tiene que empezar con https:// y ser de drive, github, imgur, páginas del dm, df o del campus.',
+                    'Link inválido. Tiene que empezar con https:// y ser de drive, github, gitlab, git de la facultad, imgur, páginas del dm, df o del campus.',
                 );
                 return;
             }
@@ -140,7 +153,7 @@ export default function ModalLink({
                         </select>
                     </label>
                 </div>
-                Los links pueden ser de drive, imgur, github, o pags de la facultad.
+                Los links pueden ser de drive, imgur, github, gitlab, o pags de la facultad.
                 <br/>
                 Pasar en el nombre cuatrimestre y año del examen.
                 <br/>
